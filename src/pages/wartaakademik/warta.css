@@ -1,0 +1,267 @@
+/* Container Utama 1440px */
+.custom-container-1440 {
+    max-width: 1440px !important;
+    margin: 0 auto;
+    padding: 25px;
+}
+
+/* Breadcrumb Styling */
+.custom-breadcrumb {
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    color: #888;
+    margin-bottom: 10px;
+}
+
+.custom-breadcrumb .active {
+    color: #000;
+    font-weight: 500;
+}
+
+/* Judul Utama Halaman */
+.main-page-title {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 3.5rem;
+    color: #000;
+    letter-spacing: -1px;
+}
+
+/* --- Category Filter (UPDATE) --- */
+.category-filter-wrapper {
+    border: none;
+    display: flex;
+    overflow-x: auto;
+    scrollbar-width: none; /* Hilangkan scrollbar di Firefox */
+}
+
+.category-filter-wrapper::-webkit-scrollbar {
+    display: none; /* Hilangkan scrollbar di Chrome/Safari */
+}
+
+.btn-category-custom {
+    background: none;
+    border: none;
+    padding: 0;
+    margin-right: 30px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: #000000; /* Warna Hitam Default */
+    transition: color 0.3s ease;
+    text-decoration: none !important; /* Hapus Garis Bawah */
+}
+
+.btn-category-custom.active {
+    color: #008156 !important; /* Warna Hijau Saat Diklik */
+    font-weight: 600;
+}
+
+/* --- News Item Styling --- */
+.news-card-horizontal {
+    margin-bottom: 4rem;
+}
+
+.img-frame img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.news-item-category {
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    color: #008156; /* Warna hijau sesuai aksen kategori aktif */
+    text-transform: capitalize; /* Membuat huruf pertama kapital */
+    display: block; /* Agar memakan satu baris sendiri */
+    letter-spacing: 0.3px;
+}
+
+.news-item-title {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 1.6rem;
+    color: #004D3C; /* Hijau Gelap untuk Judul Berita */
+    line-height: 1.2;
+    margin-bottom: 5px;
+}
+
+.news-item-date {
+    font-size: 12px;
+    color: #999;
+    margin-bottom: 15px;
+}
+
+.news-item-desc {
+    font-size: 14px;
+    margin-top: 8px;
+    line-height: 1.7;
+    color: #555;
+}
+
+/* --- Sidebar Styling --- */
+.sidebar-title {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+.archive-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+}
+
+.archive-item .year {
+    font-size: 14px;
+    color: #333;
+}
+
+.archive-item .count {
+    font-size: 12px;
+    color: #aaa;
+}
+
+.sidebar-cta-box {
+    background-color: #000;
+    color: #fff;
+    padding: 40px;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.cta-title {
+    font-weight: 700;
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+}
+
+.cta-desc {
+    font-size: 13px;
+    opacity: 0.8;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.cta-btn {
+    background-color: #fff;
+    color: #000;
+    border: none;
+    padding: 12px;
+    width: 100%;
+    font-weight: 600;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.cta-btn:hover {
+    background-color: #f2f2f2;
+}
+
+/* --- Pagination (UPDATE) --- */
+.pagination {
+    justify-content: center;
+}
+
+.pagination .page-item .page-link {
+    background-color: #fff;
+    border: 1px solid #dee2e6;
+    color: #000;
+    margin: 0 4px;
+    font-size: 14px;
+    padding: 8px 14px;
+}
+
+.pagination .page-item.active .page-link {
+    background-color: #008156 !important;
+    border-color: #008156 !important;
+    color: #fff !important;
+}
+
+.empty-state-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 0;
+    text-align: center;
+}
+
+.empty-text {
+    font-family: 'Poppins', sans-serif;
+    color: #9CA3AF;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.empty-icon-wrapper svg {
+    opacity: 0.6;
+}
+
+/* Memastikan sidebar tetap konsisten lebarnya */
+.sidebar-cta-box {
+    background-color: #000;
+    color: #fff;
+    padding: 40px 30px;
+    border-radius: 4px;
+}
+
+/* Warta Detail */
+.news-content-text p {
+    margin-bottom: 1.5rem;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+}
+
+.detail-img-wrapper img {
+    max-height: 500px;
+    object-fit: cover;
+}
+
+/* Sidebar CTA tetap konsisten */
+.sidebar-cta-box {
+    border-radius: 4px;
+}
+
+/* Share buttons hover */
+.btn-success:hover { background-color: #128c7e; }
+
+/* Penyesuaian Judul Agar Responsif */
+@media (max-width: 768px) {
+    .main-page-title {
+        font-size: 2rem !important;
+    }
+    .news-item-title {
+        font-size: 1.4rem !important;
+    }
+    .custom-container-1440 {
+        padding: 0 25px;
+    }
+}
+
+/* Hover effect untuk kartu berita lainnya */
+.hov-card:hover h6 {
+    color: #008156;
+    transition: 0.3s;
+}
+
+/* Gambar detail agar tidak terlalu tinggi di layar besar */
+.detail-img-wrapper img {
+    max-height: 500px;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Spasi antar kolom pada desktop */
+@media (min-width: 992px) {
+    .gx-lg-5 {
+        --bs-gutter-x: 4rem;
+    }
+}
+

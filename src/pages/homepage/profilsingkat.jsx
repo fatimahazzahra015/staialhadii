@@ -6,17 +6,18 @@ import './homepage.css';
 const ProfilSingkat = () => {
   return (
     <section className="profil-singkat-section">
-      <Container fluid className="px-container-custom p-5">
+      {/* Menggunakan Container standar dengan max-width 1440px via CSS */}
+      <Container className="profil-container">
         <Row className="align-items-center">
           
-          {/* JUDUL - Order 1 */}
+          {/* JUDUL & DESKRIPSI DESKTOP */}
           <Col lg={6} xs={12} className="order-1">
             <h2 className="profil-title">
               Pendidikan Islam <br />
               Unggul untuk <br />
               Peradaban
             </h2>
-            {/* Deskripsi ini hanya muncul di Desktop (lg) */}
+            
             <div className="description-container d-none d-lg-block">
               <p className="profil-description">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod 
@@ -30,8 +31,8 @@ const ProfilSingkat = () => {
             </div>
           </Col>
 
-          {/* GAMBAR - Order 2 di Mobile */}
-          <Col lg={6} xs={12} className="order-2 mt-5 mt-lg-0">
+          {/* GAMBAR KOMPOSISI */}
+          <Col lg={6} xs={12} className="order-2 mt-lg-0">
             <div className="img-combined-wrapper">
               <div className="img-main">
                 <img src={Profil} alt="Campus Building" className="img-fluid" />
@@ -42,16 +43,14 @@ const ProfilSingkat = () => {
             </div>
           </Col>
 
-          {/* DESKRIPSI & BUTTON - Hanya Muncul di Mobile (Order 3) */}
-          <Col xs={12} className="order-3 d-lg-none">
-            <div className="description-container text-center mx-auto">
+          {/* DESKRIPSI MOBILE */}
+          <Col xs={12} className="order-3 d-lg-none mt-4">
+            <div className="description-container text-start">
               <p className="profil-description">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod 
-                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim 
-                veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea 
-                komodo consequat.
+                tempor incididunt ut labore et dolore magna aliqua.
               </p>
-              <Button className="btn-profil-more">
+              <Button className="btn-profil-more w-100">
                 Lihat Semua <span className="ms-2">&rarr;</span>
               </Button>
             </div>

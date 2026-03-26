@@ -4,9 +4,9 @@ import LogoWhite from '../assets/logo-white.png';
 const Footer = () => {
   const styles = {
     footer: {
-      backgroundColor: '#052B1F', 
+      backgroundColor: 'black', 
       color: '#FFFFFF',
-      padding: '4rem 0',    // Pastikan padding kiri-kanan 0, biarkan container yang atur
+      padding: '4rem 20px',    // Pastikan padding kiri-kanan 0, biarkan container yang atur
       fontFamily: "'Poppins', sans-serif",
       marginTop: '0',       // Menghilangkan margin atas
       borderTop: 'none',    // Menghilangkan potensi border atas
