@@ -309,12 +309,14 @@
 
 .section-title-main {
   font-weight: 600;
+  margin-bottom: 20px;
   font-size: clamp(2.2rem, 4vw, 3rem);
   color: #000;
 }
 
 .section-subtitle {
-  max-width: 700px;
+  font-size: 16px;
+  max-width: 500px;
   margin: 0 auto;
   color: #666;
 }
