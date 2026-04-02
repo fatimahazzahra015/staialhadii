@@ -35,9 +35,12 @@ const Navbar = () => {
   
   const navigate = useNavigate();
   const searchInputRef = useRef(null);
-  const primaryGreen = "#008156";
+  
+  // Warna Brand Utama
+  const primaryGreen = "#052B1F"; 
+  const overlayGreen = "rgba(5, 43, 31, 0.85)";
 
-  // Data Halaman untuk Pencarian
+  // Data Halaman untuk Fitur Pencarian
   const pages = [
     { title: "Profil Kami", path: "/profil" },
     { title: "Visi dan Misi", path: "/visi-misi" },
@@ -53,13 +56,14 @@ const Navbar = () => {
     { title: "Pendaftaran Mahasiswa Baru", path: "/pendaftaran" },
   ];
 
+  // Auto-focus input saat search dibuka
   useEffect(() => {
     if (isSearchOpen && searchInputRef.current) {
       searchInputRef.current.focus();
     }
   }, [isSearchOpen]);
 
-  // Handle Live Search
+  // Logika Live Search (Filtering)
   useEffect(() => {
     if (searchQuery.trim() === "") {
       setFilteredResults([]);
@@ -98,29 +102,30 @@ const Navbar = () => {
     <>
       <style>
         {`
-          .custom-sticky-nav { width: 100% !important; }
+          .custom-sticky-nav { width: 100% !important; background-color: #fff; border-bottom: 1px solid #eee; padding: 10px; z-index: 1100; }
           
           @media (min-width: 768px) {
             .nav-item.dropdown { position: static !important; }
             .nav-item.dropdown .dropdown-menu {
               width: 70%; max-width: 1440px; left: 50% !important; transform: translateX(-50%) !important;
-              top: 100% !important; margin-top: 0 !important; border: none; box-shadow: 0 15px 30px rgba(0,0,0,0.08); padding: 20px;
+              top: 100% !important; margin-top: 0 !important; border: none; box-shadow: 0 15px 30px rgba(0,0,0,0.08); padding: 25px;
             }
             .dropdown-toggle::after { display: none !important; }
+            .mega-link:hover { color: ${primaryGreen} !important; padding-left: 5px !important; transition: 0.2s; }
           }
 
-          /* --- FULLSCREEN SEARCH OVERLAY (Sesuai Gambar 1 & 2) --- */
+          /* --- SEARCH OVERLAY STYLE --- */
           .search-fullscreen {
             position: fixed;
             top: 0; left: 0;
             width: 100%; height: 100vh;
-            background: rgba(0, 0, 0, 0.6);
-            backdrop-filter: blur(4px);
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(5px);
             z-index: 3000;
             display: flex;
             justify-content: center;
-            align-items: flex-start; /* Input muncul agak ke atas */
-            padding-top: 20vh;
+            align-items: flex-start;
+            padding-top: 15vh;
             opacity: ${isSearchOpen ? '1' : '0'};
             visibility: ${isSearchOpen ? 'visible' : 'hidden'};
             transition: all 0.3s ease;
@@ -130,97 +135,83 @@ const Navbar = () => {
             background: white;
             width: 90%;
             max-width: 600px;
-            border-radius: 16px; /* Melengkung halus seperti di gambar */
+            border-radius: 20px;
             overflow: hidden;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+            box-shadow: 0 25px 50px rgba(0,0,0,0.4);
           }
 
           .search-header {
             display: flex;
             align-items: center;
-            padding: 15px 20px;
-            border-bottom: ${filteredResults.length > 0 ? '1px solid #f0f0f0' : 'none'};
+            padding: 20px;
+            border-bottom: ${filteredResults.length > 0 ? '1px solid #eee' : 'none'};
           }
 
           .search-header input {
             flex: 1;
             border: none;
             outline: none;
-            font-size: 1.1rem;
-            margin-left: 12px;
+            font-size: 1.2rem;
+            margin-left: 15px;
+            color: #333;
           }
 
           .results-list {
-            max-height: 60vh;
+            max-height: 50vh;
             overflow-y: auto;
-            padding: 10px 0;
           }
 
           .result-item {
-            padding: 12px 25px;
+            padding: 15px 25px;
             cursor: pointer;
-            transition: 0.2s;
+            border-bottom: 1px solid #f9f9f9;
             display: flex;
             flex-direction: column;
+            transition: 0.2s;
           }
 
-          .result-item:hover {
-            background-color: #f8f9fa;
-          }
+          .result-item:hover { background-color: #f8f9fa; }
+          .result-title { font-weight: 600; color: #222; font-size: 1rem; }
+          .result-path { font-size: 0.8rem; color: #888; margin-top: 2px; }
 
-          .result-title {
-            font-weight: 600;
-            color: #333;
-            font-size: 0.95rem;
-            margin-bottom: 2px;
-          }
-
-          .result-path {
-            font-size: 0.75rem;
-            color: #999;
-          }
-
-          .close-search-overlay {
+          .close-overlay-btn {
             position: absolute;
-            top: 25px;
-            right: 30px;
+            top: 30px;
+            right: 40px;
             cursor: pointer;
             color: white;
+            transition: 0.3s;
           }
+          .close-overlay-btn:hover { transform: rotate(90deg); }
         `}
       </style>
 
-      {/* --- SEARCH OVERLAY --- */}
+      {/* --- SEARCH OVERLAY (Live Search) --- */}
       <div className="search-fullscreen" onClick={(e) => e.target === e.currentTarget && closeSearch()}>
-        <div className="close-search-overlay" onClick={closeSearch}>
-          <CloseIcon color="white" size={30} />
+        <div className="close-overlay-btn" onClick={closeSearch}>
+          <CloseIcon color="white" size={32} />
         </div>
 
         <div className="search-card">
           <div className="search-header">
-            <SearchIcon size={20} color="#999" />
+            <SearchIcon size={22} color="#888" />
             <input 
               ref={searchInputRef}
-              placeholder="Cari halaman..." 
+              placeholder="Apa yang ingin Anda cari?" 
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
             />
             {searchQuery && (
                <div style={{cursor: 'pointer'}} onClick={() => setSearchQuery("")}>
-                  <CloseIcon size={16} color="#ccc" />
+                  <CloseIcon size={18} color="#ccc" />
                </div>
             )}
           </div>
 
-          {/* List Hasil Pencarian */}
           {filteredResults.length > 0 && (
             <div className="results-list">
               {filteredResults.map((result, index) => (
-                <div 
-                  key={index} 
-                  className="result-item"
-                  onClick={() => handleResultClick(result.path)}
-                >
+                <div key={index} className="result-item" onClick={() => handleResultClick(result.path)}>
                   <span className="result-title">{result.title}</span>
                   <span className="result-path">{result.path}</span>
                 </div>
@@ -230,10 +221,11 @@ const Navbar = () => {
         </div>
       </div>
 
-      <BootstrapNavbar expanded={expanded} onToggle={setExpanded} expand="md" className="custom-sticky-nav" style={{ backgroundColor: '#fff', borderBottom: '1px solid #eee', padding: '10px', zIndex: 1100 }} sticky="top">
+      {/* --- MAIN NAVBAR --- */}
+      <BootstrapNavbar expanded={expanded} onToggle={setExpanded} expand="md" className="custom-sticky-nav" sticky="top">
         <Container>
           <BootstrapNavbar.Brand as={Link} to="/" onClick={() => setExpanded(false)}>
-            <img src={Logo} style={{ height: '40px', width: 'auto' }} alt="Logo" />
+            <img src={Logo} style={{ height: '42px', width: 'auto' }} alt="Logo" />
           </BootstrapNavbar.Brand>
 
           <div className="d-flex align-items-center d-md-none">
@@ -247,7 +239,8 @@ const Navbar = () => {
 
           <BootstrapNavbar.Collapse id="main-nav">
             <Nav className="ms-auto pt-3 pt-md-0 align-items-md-center">
-              {/* Menu Desktop */}
+              
+              {/* --- DESKTOP VIEW --- */}
               <div className="d-none d-md-flex align-items-center">
                 {menuData.map((menu, idx) => (
                   <NavDropdown 
@@ -255,30 +248,61 @@ const Navbar = () => {
                     show={openDropdown === idx} 
                     onMouseEnter={() => setOpenDropdown(idx)} 
                     onMouseLeave={() => setOpenDropdown(null)} 
-                    title={<div style={{fontSize: '13px', fontWeight: '600', color: openDropdown === idx ? primaryGreen : '#333'}}>{menu.title}<ChevronIcon isOpen={openDropdown === idx} activeColor={primaryGreen} /></div>}
+                    title={
+                      <div style={{fontSize: '13px', fontWeight: '600', color: openDropdown === idx ? primaryGreen : '#333', transition: '0.3s'}}>
+                        {menu.title}
+                        <ChevronIcon isOpen={openDropdown === idx} activeColor={primaryGreen} />
+                      </div>
+                    }
                   >
-                    <Container fluid className="py-2">
-                      <Row>
+                    <Container fluid>
+                      <Row className="gx-4">
                         <Col md={5}>
-                          <p style={{fontSize: '11px', fontWeight: '700', color: '#999', textTransform: 'uppercase'}}>{menu.title}</p>
+                          <p style={{fontSize: '11px', fontWeight: '700', color: '#aaa', textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '15px'}}>{menu.title}</p>
                           {menu.items.map((item, i) => (
-                            <Link key={i} to={getPath(item)} className="d-block py-2 text-decoration-none text-dark" style={{fontSize: '14px'}} onClick={() => setOpenDropdown(null)}>{item}</Link>
+                            <Link key={i} to={getPath(item)} className="d-block py-2 text-decoration-none text-dark mega-link" style={{fontSize: '14px', fontWeight: '500'}} onClick={() => setOpenDropdown(null)}>
+                              {item}
+                            </Link>
                           ))}
                         </Col>
+                        {/* BANNER MEGAMENU */}
                         <Col md={7}>
-                          <div style={{width: '100%', height: '150px', borderRadius: '8px', backgroundImage: `linear-gradient(rgba(0,0,0,0.1), ${primaryGreen}CC), url(${Profil})`, backgroundSize: 'cover', display: 'flex', alignItems: 'flex-end', padding: '15px', color: 'white'}}>
-                             <small>Daftar Sekarang &rarr;</small>
+                          <div 
+                            style={{
+                              width: '100%', height: '100%', minHeight: '200px', borderRadius: '12px',
+                              backgroundImage: `linear-gradient(${overlayGreen}, ${overlayGreen}), url(${Profil})`,
+                              backgroundSize: 'cover', backgroundPosition: 'center',
+                              display: 'flex', alignItems: 'flex-end', justifyContent: 'center',
+                              padding: '25px', color: 'white', cursor: 'pointer', transition: '0.3s'
+                            }}
+                            onMouseOver={(e) => e.currentTarget.style.opacity = '0.95'}
+                            onMouseOut={(e) => e.currentTarget.style.opacity = '1'}
+                            onClick={() => { navigate('/pendaftaran'); setOpenDropdown(null); }}
+                          >
+                            <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+                              <h5 style={{ fontWeight: '600', fontSize: '17px', margin: 0 }}>Daftar Untuk Program Sarjana Sekarang</h5>
+                              <span style={{ fontSize: '22px' }}>&rarr;</span>
+                            </div>
                           </div>
                         </Col>
                       </Row>
                     </Container>
                   </NavDropdown>
                 ))}
-                <div className="mx-3" style={{cursor: 'pointer'}} onClick={() => setIsSearchOpen(true)}><SearchIcon size={18} /></div>
-                <button style={{backgroundColor: '#000', color: '#fff', border: 'none', padding: '8px 15px', fontWeight: '600', fontSize: '12px'}} onClick={() => navigate('/pendaftaran')}>Pendaftaran &rarr;</button>
+                
+                <div className="mx-3" style={{cursor: 'pointer'}} onClick={() => setIsSearchOpen(true)}>
+                  <SearchIcon size={19} color="#333" />
+                </div>
+                
+                <button 
+                  style={{backgroundColor: '#000', color: '#fff', border: 'none', padding: '10px 20px', fontWeight: '600', fontSize: '12px', borderRadius: '4px'}}
+                  onClick={() => navigate('/pendaftaran')}
+                >
+                  Pendaftaran &rarr;
+                </button>
               </div>
 
-              {/* Accordion Mobile */}
+              {/* --- MOBILE VIEW --- */}
               <div className="d-md-none w-100">
                 <Accordion flush>
                   {menuData.map((menu, idx) => (
@@ -286,13 +310,21 @@ const Navbar = () => {
                       <Accordion.Header>{menu.title}</Accordion.Header>
                       <Accordion.Body>
                         {menu.items.map((item, i) => (
-                          <Link key={i} to={getPath(item)} className="d-block py-2 text-decoration-none text-muted" onClick={() => setExpanded(false)}>{item}</Link>
+                          <Link key={i} to={getPath(item)} className="d-block py-2 text-decoration-none text-muted" style={{fontSize: '14px'}} onClick={() => setExpanded(false)}>
+                            {item}
+                          </Link>
                         ))}
                       </Accordion.Body>
                     </Accordion.Item>
                   ))}
                 </Accordion>
+                <div className="p-3">
+                  <button className="w-100 p-3" style={{backgroundColor: '#000', color: '#fff', border: 'none', fontWeight: '600'}} onClick={() => {navigate('/pendaftaran'); setExpanded(false);}}>
+                    Pendaftaran &rarr;
+                  </button>
+                </div>
               </div>
+
             </Nav>
           </BootstrapNavbar.Collapse>
         </Container>
