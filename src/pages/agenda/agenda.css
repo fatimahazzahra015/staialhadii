@@ -1,0 +1,136 @@
+/* Gaya Khusus Agenda */
+.Agenda-Page, .Agenda-Page-Detail {
+    font-family: 'Poppins', sans-serif !important;
+    margin-top: 60px;
+}
+
+.custom-container-1440 {
+    max-width: 1440px !important;
+    margin: 0 auto;
+    padding: 25px;
+}
+
+.custom-breadcrumb {
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    color: #888;
+    margin-bottom: 10px;
+}
+
+.custom-breadcrumb .active {
+    color: #000;
+    font-weight: 500;
+}
+
+.agenda-card {
+    transition: transform 0.3s ease;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.agenda-card:hover {
+    transform: translateY(-5px);
+}
+
+.agenda-img-container {
+    height: 400px;
+    overflow: hidden;
+}
+
+.agenda-img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-body {
+    margin-left: -10px;
+    margin-right: -10px;
+}
+
+.agenda-badge {
+    background: #e6f3ef;
+    color: #008156;
+    padding: 4px 12px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.agenda-title-card {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color:black;
+    line-height: 1.3;
+}
+
+.agenda-info-short p {
+    font-size: 13px;
+    color: #666;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.fixed-top-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2000;
+}
+
+.meta-item strong {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 15px;
+}
+
+/* Kotak Ikon Sosial Media */
+.social-box {
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+.social-box:hover { opacity: 0.8; transform: translateY(-2px); }
+
+/* Efek Hover Poster */
+.hov-scale { transition: 0.3s; }
+.hov-scale:hover { transform: scale(1.02); }
+
+/* Container Gambar Agenda Lainnya */
+.other-agenda-img {
+    aspect-ratio: 3/4;
+    object-fit: cover;
+}
+
+.custom-pagination .page-link {
+  color: #333;
+  border: 1px solid #dee2e6;
+  margin: 0 4px;
+  border-radius: 4px !important;
+}
+
+.custom-pagination .page-item.active .page-link {
+  background-color: #00674c; /* Sesuaikan warna hijau kampusmu */
+  border-color: #00674c;
+  color: white;
+}
+
+@media (max-width: 991px) {
+    .Agenda-Page, .Agenda-Page-Detail {
+        margin-top: 20px;
+    }
+    .agenda-main-content {
+        padding: 0px 10px;
+    }
+    .page-main-title {
+        font-size: 2rem;
+    }
+}

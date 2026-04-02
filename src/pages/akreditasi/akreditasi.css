@@ -1,0 +1,162 @@
+/* --- Global & Typography --- */
+.Akreditasi-Page {
+    font-family: 'Poppins', sans-serif;
+    margin-top: 110px;
+}
+
+.custom-container-1440 {
+    max-width: 1440px !important;
+    margin: 0 auto;
+    padding: 25px;
+}
+
+/* Breadcrumb Styling */
+.custom-breadcrumb {
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    color: #888;
+    margin-bottom: 10px;
+}
+
+.custom-breadcrumb .active {
+    color: #000;
+    font-weight: 500;
+}
+
+.page-main-title {
+    font-size: 52px;
+    font-weight: 600;
+    color: var(--black-color);
+    letter-spacing: -1px;
+}
+
+.detail-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.btn-unduh-text {
+    color: #007852;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+/* --- Table Desktop Styling --- */
+.custom-table-wrapper {
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid #D9D9D9;
+}
+
+.table thead {
+    background-color: #D9D9D9; /* Header abu-abu sesuai gambar */
+}
+
+.table thead th {
+    padding: 15px 20px;
+    font-size: 14px;
+    font-weight: 700;
+    color: #333;
+    border: none;
+    text-align: center;
+}
+
+.table thead th:first-child { text-align: left; }
+
+.table tbody td {
+    padding: 18px 20px;
+    font-size: 14px;
+    border-bottom: 1px solid #eee;
+}
+
+.badge-peringkat {
+    background-color: rgba(5, 43, 31, 0.1); 
+    color: var(--primary-color);
+    padding: 4px 15px;
+    border-radius: 4px;
+    font-weight: 700;
+}
+
+.link-unduh-table {
+    color: #007852;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+/* --- Mobile Accordion Styling --- */
+.accordion-header-custom {
+    background-color: #D9D9D9;
+    font-size: 13px;
+    color: #000;
+}
+
+.custom-akreditasi-accordion .accordion-item {
+    border-bottom: 1px solid #D9D9D9;
+}
+/* Menghilangkan icon bawaan Bootstrap */
+.custom-akreditasi-accordion .accordion-button::after {
+    display: none !important;
+}
+
+/* Base button styling */
+.custom-akreditasi-accordion .accordion-button {
+    display: flex;
+    align-items: center;
+    padding: 15px 12px;
+    background-color: transparent !important;
+    box-shadow: none !important;
+}
+
+/* Membuat Lingkaran Hijau di Kiri */
+/* Mengatur Lingkaran dan Panah yang Lebih Tebal */
+.custom-akreditasi-accordion .accordion-button::before {
+    content: "";
+    width: 26px;
+    height: 26px;
+    border: 2px solid #007852; /* Ketebalan garis lingkaran ditambah */
+    border-radius: 50%;
+    display: inline-block;
+    flex-shrink: 0;
+    position: relative;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='none' stroke='%23007852' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 10px; /* Ukuran panah di dalam lingkaran */
+    transition: transform 0.2s ease-in-out;
+}
+
+/* Efek rotasi saat dibuka tetap sama */
+.custom-akreditasi-accordion .accordion-button:not(.collapsed)::before {
+    transform: rotate(-180deg);
+}
+
+/* Penyesuaian teks agar sejajar dengan lingkaran */
+.accordion-title-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.accordion-detail-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    font-size: 13px;
+    border-bottom: 1px solid #eee;
+}
+
+.text-success-custom {
+    color: #007852 !important;
+}
+
+/* --- Responsive --- */
+@media (max-width: 991px) {
+    .Akreditasi-Page { margin-top: 68px; }
+    .Akreditasi-content { padding: 0 10px; }
+    .page-main-title { font-size: 2rem; }
+    .detail-title { font-size: 1.5rem; }
+    .prodi-name { font-size: 14px; }
+    .strata-label { font-size: 14px; }
+}

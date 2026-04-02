@@ -1,17 +1,18 @@
 import React from 'react';
+import { Link } from 'react-router-dom'; // 1. Import Link
 import LogoWhite from '../assets/logo-white.png';
 
 const Footer = () => {
   const styles = {
     footer: {
-      backgroundColor: 'black', 
+      backgroundColor: 'black',
       color: '#FFFFFF',
-      padding: '4rem 20px',    // Pastikan padding kiri-kanan 0, biarkan container yang atur
+      padding: '4rem 20px',
       fontFamily: "'Poppins', sans-serif",
-      marginTop: '0',       // Menghilangkan margin atas
-      borderTop: 'none',    // Menghilangkan potensi border atas
-      display: 'block',     // Mencegah whitespace inline
-      position: 'relative', // Menjamin urutan rendering yang benar
+      marginTop: '0',
+      borderTop: 'none',
+      display: 'block',
+      position: 'relative',
       zIndex: 1,
     },
     heading: {
@@ -46,8 +47,8 @@ const Footer = () => {
     },
     logoImg: {
       height: 'auto',
-      maxWidth: '100%', // Agar logo responsif di mobile
-      width: '450px', // Sesuaikan dengan ukuran logo besar di screenshot
+      maxWidth: '100%',
+      width: '450px',
       objectFit: 'contain'
     }
   };
@@ -75,24 +76,24 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Kolom Tengah: Main Menu - Menggunakan col-12 agar menumpuk di mobile */}
+          {/* Kolom Tengah: Main Menu - Dihubungkan ke Route App.js */}
           <div className="col-lg-3 col-12 mb-4">
             <h6 style={styles.heading}>Main Menu</h6>
             <nav>
-              <a href="#beranda" style={styles.navLink}>Beranda</a>
-              <a href="#warta" style={styles.navLink}>Warta Akademik</a>
-              <a href="#profil" style={styles.navLink}>Profil Kami</a>
-              <a href="#prodi" style={styles.navLink}>Program Studi</a>
-              <a href="#agenda" style={styles.navLink}>Agenda Kampus</a>
+              <Link to="/" style={styles.navLink}>Beranda</Link>
+              <Link to="/warta" style={styles.navLink}>Warta Akademik</Link>
+              <Link to="/profil" style={styles.navLink}>Profil Kami</Link>
+              <Link to="/agenda" style={styles.navLink}>Agenda Kampus</Link>
             </nav>
           </div>
 
-          {/* Kolom Kanan: Program - Menggunakan col-12 agar menumpuk di mobile */}
+          {/* Kolom Kanan: Program - Menggunakan slug prodi */}
           <div className="col-lg-3 col-12 mb-4">
             <h6 style={styles.heading}>Program</h6>
             <nav>
-              <a href="#pai" style={styles.navLink}>Pendidikan Agama Islam</a>
-              <a href="#pba" style={styles.navLink}>Pendidikan Bahasa Arab</a>
+              {/* Sesuai dengan rute /prodi/:slug di App.js */}
+              <Link to="/prodi/pendidikan-agama-islam" style={styles.navLink}>Pendidikan Agama Islam</Link>
+              <Link to="/prodi/pendidikan-bahasa-arab" style={styles.navLink}>Pendidikan Bahasa Arab</Link>
             </nav>
           </div>
 
@@ -102,11 +103,13 @@ const Footer = () => {
         <div className="row">
           <div className="col-12">
             <div style={styles.brandWrapper} className="justify-content-start">
-              <img 
-                src={LogoWhite} 
-                alt="STAI AL-HADI BOJONEGORO" 
-                style={styles.logoImg} 
-              />
+              <Link to="/">
+                <img 
+                  src={LogoWhite} 
+                  alt="STAI AL-HADI BOJONEGORO" 
+                  style={styles.logoImg} 
+                />
+              </Link>
             </div>
           </div>
         </div>

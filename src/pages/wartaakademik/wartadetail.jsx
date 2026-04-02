@@ -33,8 +33,16 @@ const WartaDetail = () => {
 
   return (
     <div className="Warta-Page">
-      <Header />
-      <MyNavbar />
+      <div style={{ 
+        position: 'fixed', 
+        top: 0, 
+        left: 0, 
+        width: '100%', 
+        zIndex: 2000, 
+      }}>
+        <Header />
+        <MyNavbar />
+      </div>
       <main className="warta-main-content py-5">
         <Container className="custom-container-1440">
           <nav className="custom-breadcrumb mb-4">

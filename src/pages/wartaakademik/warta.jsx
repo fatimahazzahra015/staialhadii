@@ -72,14 +72,24 @@ const Warta = () => {
 
   return (
     <div className="Warta-Page">
-      <Header />
-      <MyNavbar />
+      <div style={{ 
+        position: 'fixed', 
+        top: 0, 
+        left: 0, 
+        width: '100%', 
+        zIndex: 2000, 
+      }}>
+        <Header />
+        <MyNavbar />
+      </div>
       
       <main className="warta-main-content py-5">
         <Container className="custom-container-1440">
           {/* Breadcrumb */}
           <nav className="custom-breadcrumb mb-4">
-            <span>Home</span> / <span className="active">Warta Akademik</span>
+            <Link to="/" className="text-decoration-none text-muted">Home</Link> 
+            <span className="mx-2">/</span> 
+            <span className="active text-dark fw-bold">Warta Akademik</span>
           </nav>
 
           <h1 className="main-page-title mb-4">Warta Akademik</h1>
@@ -104,23 +114,30 @@ const Warta = () => {
                     {allNews.length > 0 ? (
                     <>
                       {currentItems.map((item) => (
-                      <div key={item.id} className="news-card-horizontal mb-5">
-                        <Row className="align-items-start">
-                        <Col md={5} xs={12}>
-                          <div className="img-frame">
-                           <img src={item.img} alt="news" className="img-fluid" />
-                          </div>
-                        </Col>
-                        <Col md={7} xs={12} className="mt-3 mt-md-0">
-                          <h3 className="news-item-title"> <Link to={`/warta/${item.id}`} className="text-decoration-none text-dark">{item.title}</Link> </h3>
-                          <p className="news-item-date d-flex align-items-center mb-0" style={{ whiteSpace: 'nowrap' }}>
-                            <span className="news-item-category me-1">{item.category}</span>
-                            <span className="me-1">• {item.date}</span>
-                          </p>
-                          <p className="news-item-desc">{item.desc}</p>
-                        </Col>
-                        </Row>
-                      </div>
+                        <div key={item.id} className="news-card-horizontal mb-5">
+                          <Row className="align-items-start">
+                            <Col md={5} xs={12}>
+                              {/* Tambahkan Link di sini untuk membungkus gambar */}
+                              <Link to={`/warta/${item.id}`}>
+                                <div className="img-frame">
+                                  <img src={item.img} alt="news" className="img-fluid" />
+                                </div>
+                              </Link>
+                            </Col>
+                            <Col md={7} xs={12} className="mt-3 mt-md-0">
+                              <h3 className="news-item-title"> 
+                                <Link to={`/warta/${item.id}`} className="text-decoration-none text-dark">
+                                  {item.title}
+                                </Link> 
+                              </h3>
+                              <p className="news-item-date d-flex align-items-center mb-0" style={{ whiteSpace: 'nowrap' }}>
+                                <span className="news-item-category me-1">{item.category}</span>
+                                <span className="me-1">• {item.date}</span>
+                              </p>
+                              <p className="news-item-desc">{item.desc}</p>
+                            </Col>
+                          </Row>
+                        </div>
                       ))}
 
                       {/* Pagination di Center */}

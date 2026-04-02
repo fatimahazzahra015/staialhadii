@@ -1,0 +1,104 @@
+.Prodi-Page {
+    font-family: 'Poppins', sans-serif !important;
+    margin-top: 60px;
+}
+
+.custom-container-1440 {
+    max-width: 1440px !important;
+    margin: 0 auto;
+}
+
+/* Judul Sesuai Gambar */
+.page-main-title {
+    font-size: 42px; /* Disesuaikan agar proporsional */
+    font-weight: 700;
+    color: var(--black-color);
+    margin-top: 10px;
+}
+
+.intro-text {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #333;
+}
+
+/* Subtitle Section */
+.section-subtitle {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 1.2rem;
+    color: #1a1a1a; /* Hitam tegas sesuai gambar ef5424 */
+}
+
+/* Info Boxes Gray */
+.info-box-gray {
+    background-color: #f2f2f2;
+    padding: 30px;
+    border-radius: 4px;
+    text-align: center;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.info-box-gray h6 {
+    font-weight: 700;
+    margin-bottom: 8px;
+    font-size: 1.1rem;
+}
+
+.info-box-gray p {
+    margin-bottom: 0;
+    font-size: 0.95rem;
+    color: #555;
+}
+
+/* List Styling */
+.custom-list {
+    padding-left: 1.2rem;
+    list-style-type: disc;
+}
+
+.custom-list li {
+    margin-bottom: 8px;
+    color: #444;
+}
+
+.noted-text {
+    font-style: italic;
+    color: #666;
+    border-left: 3px solid #ccc;
+    padding-left: 15px;
+    font-size: 0.95rem;
+}
+
+/* Sidebar CTA (Sticky) */
+.sidebar-cta-box {
+    background-color: #000;
+    color: #fff;
+    padding: 40px 30px;
+    border-radius: 4px;
+    text-align: center;
+}
+
+/* Button & Icons */
+.share-icon {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    border-radius: 4px;
+    font-size: 1.4rem;
+}
+
+@media (max-width: 991px) {
+    .Prodi-Page {
+        margin-top: 20px;
+    }
+    .page-main-title { font-size: 2rem; }
+    .sidebar-cta-box { margin-top: 30px; }
+    .Prodi-content { padding: 0px 10px; }
+}

@@ -1,0 +1,160 @@
+/* Reuse Styles from Akreditasi */
+.fixed-top-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2000;
+}
+
+.Kalender-Page {
+    font-family: 'Poppins', sans-serif;
+    margin-top: 110px;
+}
+
+.custom-container-1440 {
+    max-width: 1440px !important;
+    margin: 0 auto;
+    padding: 25px;
+}
+
+/* Breadcrumb Styling */
+.custom-breadcrumb {
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    color: #888;
+    margin-bottom: 10px;
+}
+
+.custom-breadcrumb .active {
+    color: #000;
+    font-weight: 500;
+}
+
+.Kalender-content {
+    margin-top: 100px; /* Menyesuaikan fixed header */
+}
+
+/* Tab Styling */
+.year-tabs {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.btn-year {
+    border: none;
+    background: none;
+    padding: 8px 20px;
+    font-size: 14px;
+    color: #888;
+    transition: 0.3s;
+}
+
+.btn-year.active {
+    background-color: #000;
+    color: #fff;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.semester-title {
+    font-size: 22px;
+    font-weight: 700;
+    color: #333;
+    margin: 0;
+}
+
+.link-unduh-primary {
+    color: #007852;
+    font-weight: 600;
+    text-decoration: none;
+    border-bottom: 1.5px solid #007852;
+}
+
+/* Table Customization */
+.custom-table-wrapper thead th {
+    background-color: #D9D9D9;
+    text-align: left !important;
+    padding: 15px 25px;
+}
+
+.custom-table-wrapper tbody td {
+    padding: 25px;
+    vertical-align: top;
+}
+
+/* Accordion Customization (Lingkaran Hijau) */
+.custom-akreditasi-accordion .accordion-button::before {
+    content: "";
+    width: 22px;
+    height: 22px;
+    border: 2px solid #007852;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 12px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='none' stroke='%23007852' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M2 5l6 6 6-6'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 8px;
+    transition: 0.2s;
+}
+
+.custom-akreditasi-accordion .accordion-button:not(.collapsed)::before {
+    transform: rotate(-180deg);
+}
+
+.mobile-detail-box {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+
+/* Layout baris detail di mobile (Pelaksanaan & Keterangan) */
+.mobile-detail-row {
+    display: flex;
+    justify-content: space-between; /* Memisahkan label ke kiri dan isi ke kanan */
+    align-items: flex-start;
+    padding: 12px 0;
+    margin-top: -10px;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+}
+
+/* Styling Label (Sebelah Kiri) */
+.mobile-detail-row .label {
+    font-size: 13px;
+    color: #333;
+    font-weight: 500;
+    flex-shrink: 0;
+    width: 35%; /* Memberikan ruang tetap untuk label */
+}
+
+/* Styling Nilai/Value (Sebelah Kanan) */
+.mobile-detail-row .value {
+    font-size: 13px;
+    color: #333;
+    width: 65%;
+    line-height: 1.4;
+}
+
+/* Khusus Accordion Header agar teks judul kegiatan lebih rapat ke lingkaran */
+.custom-akreditasi-accordion .accordion-button {
+    padding: 15px 10px;
+}
+
+.custom-akreditasi-accordion .accordion-header-custom {
+    background-color: #D9D9D9; /* Header abu-abu sesuai gambar */
+    font-size: 13px;
+    color: #000;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+@media (max-width: 991px) {
+    .Kalender-Page { margin-top: 68px; }
+    .Kalender-content { padding: 0 10px; margin-top: 20px; }
+    .semester-title { font-size: 18px; }
+    .page-main-title { font-size: 2rem; }
+}

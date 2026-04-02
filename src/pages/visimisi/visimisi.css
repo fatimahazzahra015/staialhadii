@@ -1,0 +1,119 @@
+/* Layout Styling */
+.VisiMisi-Page {
+    font-family: 'Poppins', sans-serif !important;
+    margin-top: 60px;
+}
+
+.custom-container-1440 {
+    max-width: 1440px !important; /* Sesuai standar index.css Anda */
+    margin: 0 auto;
+}
+
+.page-main-title {
+    font-size: 52px;
+    font-weight: 600;
+    color: var(--black-color);
+    letter-spacing: -0.5px;
+}
+
+.intro-text {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: #444;
+    font-weight: 400;
+}
+
+/* Content Styling */
+.section-subtitle {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    max-width: 900px;
+    color: var(--primary-color);
+}
+
+.custom-list {
+    padding-left: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.custom-list li {
+    margin-bottom: 12px;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Sidebar CTA Box - Tetap Hitam Sesuai Gambar */
+.sidebar-cta-box {
+    background-color: var(--black-color);
+    color: var(--white-color);
+    padding: 40px 30px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.cta-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.cta-desc {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: #ccc;
+    margin-bottom: 30px;
+    font-weight: 300;
+}
+
+.cta-btn {
+    background-color: var(--white-color);
+    color: var(--black-color);
+    border: none;
+    padding: 14px 25px;
+    font-weight: 600;
+    border-radius: 4px;
+    transition: 0.3s;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+}
+
+.cta-btn:hover {
+    background-color: #e0e0e0;
+    transform: scale(1.02);
+}
+
+/* Social Share Icons */
+.share-icon {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    border-radius: 4px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.share-icon:hover {
+    opacity: 0.9;
+    transform: translateY(-3px);
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+    .VisiMisi-Page {
+        margin-top:20px;
+    }
+    .page-main-title {
+        font-size: 2rem;
+    }
+    .sidebar-cta-box {
+        margin-top: 40px;
+    }
+    .visimisi-content { 
+        padding: 0px 10px;
+    }
+}

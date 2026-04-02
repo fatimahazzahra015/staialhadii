@@ -22,7 +22,7 @@ const WartaAkademik = () => {
             <Link to={`/warta/${beritaData[0].id}`} className="text-decoration-none">
               <Card className="main-news-card border-0 bg-transparent hov-card">
                 <Card.Img src={beritaData[0].img} className="rounded-0 news-img-lg" />
-                <Card.Body className="px-0 pb-0">
+                <Card.Body className="pb-0">
                   <Card.Text className="text-muted small mb-2">{beritaData[0].date}</Card.Text>
                   <Card.Title className="main-news-title fw-bold text-dark">{beritaData[0].title}</Card.Title>
                 </Card.Body>
@@ -38,7 +38,7 @@ const WartaAkademik = () => {
                   <Link to={`/warta/${item.id}`} className="text-decoration-none">
                     <Card className="border-0 sub-news-card h-100 bg-transparent hov-card">
                       <Card.Img src={item.img} className="rounded-0 news-img-sm" />
-                      <Card.Body className="px-0">
+                      <Card.Body className="pb-0">
                         <Card.Text className="text-muted small mb-1">{item.date}</Card.Text>
                         <Card.Title className="news-sub-title text-dark">{item.title}</Card.Title>
                       </Card.Body>

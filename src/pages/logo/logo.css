@@ -1,0 +1,189 @@
+/* logo.css atau brand.css */
+.Logo-Page {
+    font-family: 'Poppins', sans-serif;
+    margin-top: 85px; /* Menyesuaikan fixed header */
+}
+
+.custom-container-1440 {
+    max-width: 1440px !important;
+    margin: 0 auto;
+}
+
+.brand-section-title {
+    font-size: 52px;
+    font-weight: 600;
+    color: var(--black-color);
+    letter-spacing: -0.5px;
+}
+
+/* --- Filosofi Logo Selang-Seling --- */
+.philosophy-card {
+    padding: 30px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+/* Background Abu-abu Muda (#F2F2F2) untuk index Genap (0, 2, 4...) */
+.philosophy-card:nth-child(even) {
+    background-color: #F2F2F2;
+}
+
+/* Background Abu-abu Lebih Tua (#E6E6E6) untuk index Ganjil (1, 3, 5...) */
+.philosophy-card:nth-child(odd) {
+    background-color: #E6E6E6;
+}
+
+.philosophy-icon-wrapper {
+    min-width: 100px;
+    text-align: center;
+}
+
+.philosophy-icon-wrapper img {
+    max-width: 80px;
+    height: auto;
+}
+
+.philosophy-text h5 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.philosophy-text p {
+    font-size: 14px;
+    color: #444;
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+/* --- Palet Warna INTERAKTIF (Desktop) --- */
+.color-palette-section {
+    margin: 60px 10px;
+}
+
+.color-grid {
+    display: flex;
+    width: 100%;
+    height: 250px; /* Tinggi ditambah untuk memuat deskripsi */
+    border-radius: 8px;
+    overflow: hidden;
+    shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.color-item {
+    flex: 1; /* Lebar default sama rata */
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    transition: flex 0.6s ease; /* Transisi halus saat melebar */
+    cursor: pointer;
+    position: relative;
+}
+
+/* Saat warna di-hover */
+.color-item:hover {
+    flex: 3; /* Melebar 3x lipat */
+}
+
+.color-name {
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+/* Deskripsi tersembunyi secara default */
+.color-desc {
+    font-size: 13px;
+    line-height: 1.5;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.4s ease 0.2s, transform 0.4s ease 0.2s; /* Delay muncul */
+    max-width: 80%; /* Agar teks tidak terlalu panjang ke kanan saat melebar */
+}
+
+/* Deskripsi muncul saat parent-nya di-hover */
+.color-item:hover .color-desc {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.color-code {
+    margin-top: auto;
+    font-size: 12px;
+    opacity: 0.8;
+}
+
+/* --- Download Section --- */
+.download-logo-card {
+    padding: 30px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    transition: 0.3s;
+}
+
+.logo-preview-box {
+    max-width: 150px;
+}
+
+/* --- Responsive Mobile --- */
+@media (max-width: 991px) {
+    .Logo-Page {
+        margin-top: 43px;
+    }
+    .logo-content {
+        padding: 0px 10px;
+    }
+    .brand-section-title {
+        font-size: 2rem;
+    }
+    .philosophy-card {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+        padding: 20px;
+    }
+    .color-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        height: auto;
+        gap: 0;
+    }
+    
+    .color-item {
+        width: 100%;
+        min-height: 200px;
+        flex: none !important;
+        padding: 15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .color-item:hover {
+        flex: none !important;
+        transform: none; 
+    }
+
+    .color-desc {
+        opacity: 1;
+        vertical-align: middle;
+        transform: none;
+        max-width: 100%;
+        margin-top: 10px;
+        font-size: 0.85rem;
+    }
+
+    .download-logo-card {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+}

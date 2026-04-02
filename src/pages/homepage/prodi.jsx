@@ -14,7 +14,6 @@ const ProgramStudi = () => {
   const programs = [
     { title: "S1 Pendidikan Agama Islam", img: Profil },
     { title: "S1 Pendidikan Bahasa Arab", img: Profil },
-    { title: "S1 Hukum Keluarga Islam", img: Profil },
   ];
 
   return (

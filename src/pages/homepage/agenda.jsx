@@ -1,53 +1,47 @@
 import React from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import Profil from '../../assets/profil.png'; 
+import { useNavigate } from 'react-router-dom';
+// 1. Import data allAgendas dari file Agenda.jsx
+import { allAgendas } from '../agenda/Agenda'; 
 import './homepage.css';
 
 const AgendaKampus = () => {
-  const agendaData = [
-    {
-      id: 1,
-      title: "Workshop: Digital Marketing Syariah",
-      date: "22 Maret 2026",
-      time: "09:00 – 12:00",
-      image: Profil
-    },
-    {
-      id: 2,
-      title: "Workshop: Digital Marketing Syariah",
-      date: "22 Maret 2026",
-      time: "09:00 – 12:00",
-      image: Profil
-    },
-    {
-      id: 3,
-      title: "Workshop: Digital Marketing Syariah",
-      date: "22 Maret 2026",
-      time: "09:00 – 12:00",
-      image: Profil
-    }
-  ];
+  const navigate = useNavigate();
+
+  // 2. Ambil hanya 3 data teratas untuk ditampilkan di Homepage
+  const displayAgendas = allAgendas.slice(0, 3);
+
+  const handleLihatSemua = () => {
+    navigate('/agenda');
+  };
+
+  const handleDetailAgenda = (id) => {
+    navigate(`/agenda/${id}`);
+  };
 
   return (
-    <section className="agenda-section py-5">
-      <div className="container px-container-custom ">
-        {/* Judul Section */}
+    <section className="agenda-section py-5 px-2">
+      <div className="container px-container-custom">
         <h2 className="section-title-agenda mb-5">
           Agenda Kegiatan Kampus
         </h2>
 
-        {/* Grid Kartu Agenda */}
-        <div className="row g-2">
-          {agendaData.map((item) => (
+        <div className="row g-4">
+          {displayAgendas.map((item) => (
             <div key={item.id} className="col-md-6 col-lg-4">
-              <div className="agenda-card">
+              {/* 3. Tambahkan onClick untuk masuk ke Detail */}
+              <div 
+                className="agenda-card h-100" 
+                style={{ cursor: 'pointer' }}
+                onClick={() => handleDetailAgenda(item.id)}
+              >
                 <div className="agenda-img-wrapper mb-3">
-                  <img src={item.image} alt={item.title} className="img-fluid agenda-img" />
+                  {/* Gunakan item.img sesuai struktur data di Agenda.jsx */}
+                  <img src={item.img} alt={item.title} className="img-fluid agenda-img" />
                 </div>
                 <div className="agenda-content">
                   <h5 className="agenda-card-title">{item.title}</h5>
                   <p className="agenda-date-time text-muted">
-                    {item.date} {item.time}
+                    {item.date} | {item.time}
                   </p>
                 </div>
               </div>
@@ -55,9 +49,12 @@ const AgendaKampus = () => {
           ))}
         </div>
 
-        {/* Tombol Lihat Semua */}
+        {/* 4. Tombol Lihat Semua ke Halaman Agenda */}
         <div className="text-center mt-5">
-          <button className="btn-lihat-semua d-inline-flex align-items-center">
+          <button 
+            className="btn-lihat-semua d-inline-flex align-items-center"
+            onClick={handleLihatSemua}
+          >
             Lihat Semua 
             <svg className="ms-2" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               <line x1="5" y1="12" x2="19" y2="12"></line>

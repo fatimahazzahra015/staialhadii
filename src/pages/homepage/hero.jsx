@@ -14,7 +14,7 @@ const Hero = () => {
   const slides = [
     { id: "01", title: "Unggul dalam Ilmu, \n Kokoh dalam Akhlak", desc: "Pendidikan Islam adaptif dan unggul Berakar pada tradisi, melangkah menuju masa depan.", img: Profil },
     { id: "02", title: "Mencetak Generasi \n Qur'ani yang Berilmu", desc: "Kurikulum terpadu yang memadukan keilmuan kontemporer dengan nilai-nilai luhur pesantren.", img: Warta },
-    { id: "03", title: "Lingkungan Belajar \n yang Inspiratif", desc: "Fasilitas lengkap dan tenaga pendidik profesional untuk mendukung potensi maksimal mahasiswa.", img: Profil }
+    { id: "03", title: "Lingkungan Belajar \n Inspiratif dan Menyenangkan", desc: "Fasilitas lengkap dan tenaga pendidik profesional untuk mendukung potensi maksimal mahasiswa.", img: Profil }
   ];
 
   return (
@@ -23,7 +23,7 @@ const Hero = () => {
         modules={[Autoplay, Pagination, EffectFade]}
         effect="fade"
         speed={1000}
-        autoplay={{ delay: 5000, disableOnInteraction: false }}
+        autoplay={{ delay: 4000, disableOnInteraction: false }}
         pagination={{
           clickable: true,
           renderBullet: (i, className) => `<span class="${className}">0${i + 1}</span>`,

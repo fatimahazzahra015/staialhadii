@@ -1,4 +1,9 @@
 /* Container Utama 1440px */
+.Warta-Page {
+    font-family: 'Poppins', sans-serif !important;
+    margin-top: 60px;
+}
+
 .custom-container-1440 {
     max-width: 1440px !important;
     margin: 0 auto;
@@ -21,8 +26,8 @@
 /* Judul Utama Halaman */
 .main-page-title {
     font-family: 'Poppins', sans-serif;
-    font-weight: 700;
-    font-size: 3.5rem;
+    font-weight: 600;
+    font-size: 52px;
     color: #000;
     letter-spacing: -1px;
 }
@@ -67,6 +72,21 @@
     height: 240px;
     object-fit: cover;
     border-radius: 4px;
+}
+
+.img-frame {
+  overflow: hidden; /* Agar gambar tidak keluar bingkai saat zoom */
+  border-radius: 8px; /* Sesuaikan dengan desainmu */
+  transition: transform 0.3s ease;
+}
+
+.img-frame:hover img {
+  transform: scale(1.05); /* Efek zoom tipis saat cursor di atas gambar */
+  cursor: pointer;
+}
+
+.img-frame img {
+  transition: transform 0.3s ease;
 }
 
 .news-item-category {
@@ -231,18 +251,7 @@
 /* Share buttons hover */
 .btn-success:hover { background-color: #128c7e; }
 
-/* Penyesuaian Judul Agar Responsif */
-@media (max-width: 768px) {
-    .main-page-title {
-        font-size: 2rem !important;
-    }
-    .news-item-title {
-        font-size: 1.4rem !important;
-    }
-    .custom-container-1440 {
-        padding: 0 25px;
-    }
-}
+
 
 /* Hover effect untuk kartu berita lainnya */
 .hov-card:hover h6 {
@@ -265,3 +274,21 @@
     }
 }
 
+/* Penyesuaian Judul Agar Responsif */
+@media (max-width: 768px) {
+    .Warta-Page{
+        margin-top: 20px;
+    }
+    .main-page-title {
+        font-size: 2rem !important;
+    }
+    .news-item-title {
+        font-size: 1.4rem !important;
+    }
+    .custom-container-1440 {
+        padding: 0 25px;
+    }
+    .warta-main-content {
+        padding: 0 10px;
+    }
+}

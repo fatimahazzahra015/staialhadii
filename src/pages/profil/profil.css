@@ -1,0 +1,413 @@
+/* profil.css */
+.profil-hero {
+    padding: 20px 20px 40px 20px;
+    margin-top: 40px;
+    overflow: hidden;
+}
+
+.profil-breadcrumb {
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.profil-breadcrumb a {
+    color: #888;
+    text-decoration: none;
+}
+
+.profil-title {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #000;
+}
+
+.profil-description {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #333;
+    margin-bottom: 40px;
+    max-width: 100%;
+}
+
+.hero-img-wrapper {
+    border-radius: 0; /* Sesuai gambar, kotak tanpa border radius tajam */
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+.hero-img-wrapper img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+.profil-tagline-container {
+    text-align: center;
+}
+
+.profil-tagline-text {
+    font-size: 24px;
+    font-weight: 700;
+    color: #1a1a1a;
+    line-height: 1.4;
+}
+
+/* Responsive Logic */
+@media (max-width: 767px) {
+    .profil-hero {
+       margin-bottom: 20px;
+       margin-top: 20px;
+    }
+    .profil-title {
+        font-size: 2rem;
+    }
+    .mobile-flex-stack {
+        display: flex;
+        flex-direction: column;
+    }
+    .order-img-1 { order: 1; }
+    .order-tagline { 
+        order: 2; 
+        padding: 30px 0;
+    }
+    .order-img-2 { order: 3; }
+    .hero-img-wrapper {
+        margin-bottom: 0;
+    }
+}
+
+@media (min-width: 768px) {
+    .profil-tagline-container {
+        margin-top: 40px;
+    }
+}
+
+/* profil.css - Main Content Section */
+.profil-main {
+    padding: 80px 20px;
+    background-color: #f2f2f2;
+}
+
+.profil-main-title {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 50px; /* Ditambah agar tidak terlalu nempel dengan gambar/teks */
+    color: #1a1a1a;
+}
+
+.profil-main-text {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #444;
+    text-align: justify;
+}
+
+/* Image Composition */
+.img-composition-wrapper {
+    position: relative;
+    padding-right: 40px;
+    padding-bottom: 40px;
+}
+
+.img-main {
+    width: 100%;
+    border-radius: 4px;
+}
+
+.img-sub {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 50%;
+    border: 8px solid #f2f2f2;
+    border-radius: 4px;
+}
+
+/* Responsive Logic */
+@media (max-width: 767px) {
+    .profil-main {
+        padding: 40px 20px;
+    }
+    
+    .profil-main-title {
+        font-size: 28px;
+        margin-bottom: 30px;
+        text-align: left; /* Tetap rata kiri di mobile sesuai desain */
+    }
+
+    .img-composition-wrapper {
+        padding-right: 20px;
+        padding-bottom: 20px;
+    }
+    
+    .profil-main-text {
+        font-size: 15px;
+    }
+}
+
+/* misi.css */
+.profil-misi {
+    padding: 80px 20px 40px 20px;
+    background-color: #ffffff;
+}
+
+.misi-card {
+    background-color: #006051; /* Hijau Tua sesuai brand */
+    padding: 40px 30px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border-radius: 4px;
+    transition: transform 0.3s ease;
+}
+
+.misi-card:hover {
+    transform: translateY(-10px);
+}
+
+.misi-number {
+    background-color: #CAA945; /* Emas sesuai brand */
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.misi-number span {
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.misi-title {
+    color: #ffffff;
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.misi-text {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 15px;
+    line-height: 1.7;
+    margin-bottom: 0;
+}
+
+/* Responsif Mobile */
+@media (max-width: 767px) {
+    .profil-misi {
+        padding: 40px 20px;
+    }
+    
+    .misi-card {
+        padding: 30px 20px;
+    }
+}
+
+
+\\* --- Bagian card --- *\\
+
+.founder-section {
+  margin: 0 auto;
+}
+
+.bg-black-custom {
+  background-color: var(--black-color);
+  min-height: 550px;
+  width: 97%;
+  margin: 0 auto;
+  display: flex; 
+}
+
+.founder-title {
+  font-weight: 600;
+  font-size: 3rem;
+  line-height: 1.1;
+}
+
+.quote-text {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  font-weight: 300;
+  color: #f8f9fa;
+  opacity: 0.95;
+}
+
+.profile-img {
+  width: 60px;
+  height: 60px;
+  background-color: #D9D9D9;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.profile-name {
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+}
+
+.profile-desc {
+  font-size: 0.75rem;
+  color: #A0A0A0;
+  display: block;
+  line-height: 1.4;
+}
+
+/* Container pembungkus utama */
+.quote-wrapper {
+  min-height: 280px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  overflow: hidden; 
+  position: relative;
+}
+
+/* Track Animasi */
+.slide-track {
+  animation: slideInRight 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+/* Keyframes Geser dari Kanan ke Kiri */
+@keyframes slideInRight {
+  0% {
+    transform: translateX(100px); /* Mulai dari kanan sejauh 100px */
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0); /* Berhenti di posisi normal */
+    opacity: 1;
+  }
+}
+
+/* Navigasi Panah tetap diam */
+.btn-nav {
+  background: transparent;
+  border: none;
+  color: white;
+  opacity: 0.7;
+  transition: opacity 0.3s, transform 0.2s;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.btn-nav:hover {
+  opacity: 1;
+}
+
+.btn-nav:active {
+  transform: scale(0.9);
+}
+
+/* Responsif */
+@media (max-width: 991.98px) {
+  .bg-black-custom {
+    min-height: auto; /* Biarkan card memanjang sesuai konten di mobile */
+    padding: 80px 20px !important;
+  }
+  
+  .founder-title {
+    margin-bottom: 3rem;
+  }
+
+  .quote-wrapper {
+    margin-top: 2rem !important; /* Jarak antara judul dan quote di mobile */
+  }
+}
+
+@media (min-width: 992px) {
+  .quote-wrapper {
+    max-width: 420px; /* Ukuran lebar quote agar persis seperti di gambar */
+    align-self: flex-end; /* Memastikan nempel ke kanan bawah */
+  }
+}
+
+
+\\ Agenda \\
+.section-title-agenda {
+  color: var(--black-color);
+}
+
+.section-title-agenda {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 3rem;
+  line-height: 1.1;
+  padding: 0px 12px;
+}
+
+.agenda-card {
+  background: transparent;
+  border: none;
+  padding: 10px;
+}
+
+.agenda-img-wrapper {
+  width: 100%;
+  aspect-ratio: 3 / 4; /* Membuat gambar tegak seperti di screenshot */
+  overflow: hidden;
+  border-radius: 4px; /* Sudut tajam sesuai gambar */
+}
+
+.agenda-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Menjaga gambar tidak gepeng */
+  transition: transform 0.3s ease;
+}
+
+.agenda-card:hover .agenda-img {
+  transform: scale(1.05); /* Efek zoom saat hover */
+}
+
+.agenda-card-title {
+  font-weight: 700;
+  font-size: 1.15rem;
+  line-height: 1.3;
+  margin-bottom: 5px;
+  color: var(--black-color);
+}
+
+.agenda-date-time {
+  font-size: 0.85rem;
+  color: #6c757d;
+}
+
+.btn-lihat-semua {
+  background-color: var(--black-color);
+  color: white;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: opacity 0.2s;
+}
+
+.btn-lihat-semua:hover {
+  opacity: 0.85;
+  color: white;
+}
+
+/* Penyesuaian Mobile */
+@media (max-width: 768px) {
+  .section-title-agenda {
+    font-size: 2.2rem;
+    text-align: center;
+    padding: 0px 20px;
+  }
+  
+  .agenda-card {
+    margin-bottom: 20px;
+    padding: 0px 20px;
+  }
+}
