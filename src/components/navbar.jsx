@@ -12,20 +12,16 @@ const SearchIcon = ({ size = 20, color = "currentColor" }) => (
   </svg>
 );
 
-const ChevronIcon = ({ isOpen, activeColor }) => (
-  <svg 
-    width="12" height="12" viewBox="0 0 24 24" fill="none" stroke={isOpen ? activeColor : "#333"} 
-    strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"
-    style={{ transform: isOpen ? 'rotate(180deg)' : 'rotate(0deg)', transition: '0.3s', marginLeft: '8px' }}
-  >
-    <polyline points="6 9 12 15 18 9"></polyline>
-  </svg>
-);
-
 const CloseIcon = ({ color = "black", size = 24 }) => (
   <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
     <line x1="18" y1="6" x2="6" y2="18"></line>
     <line x1="6" y1="6" x2="18" y2="18"></line>
+  </svg>
+);
+
+const ChevronIcon = ({ isOpen, activeColor }) => (
+  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke={isOpen ? activeColor : "#333"} strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" style={{ transform: isOpen ? 'rotate(180deg)' : 'rotate(0deg)', transition: '0.3s', marginLeft: '8px' }}>
+    <polyline points="6 9 12 15 18 9"></polyline>
   </svg>
 );
 
@@ -35,74 +31,59 @@ const Navbar = () => {
   const [openDropdown, setOpenDropdown] = useState(null);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
+  const [filteredResults, setFilteredResults] = useState([]);
+  
   const navigate = useNavigate();
   const searchInputRef = useRef(null);
+  
+  // Warna Brand Utama
+  const primaryGreen = "#052B1F"; 
+  const overlayGreen = "rgba(5, 43, 31, 0.85)";
 
-  const primaryGreen = "#008156"; 
+  // Data Halaman untuk Fitur Pencarian
+  const pages = [
+    { title: "Profil Kami", path: "/profil" },
+    { title: "Visi dan Misi", path: "/visi-misi" },
+    { title: "Dosen dan Tenaga Pendidik", path: "/dosen" },
+    { title: "Logo dan Brand", path: "/logo" },
+    { title: "Seleksi Masuk", path: "/seleksi-masuk" },
+    { title: "Akreditasi", path: "/akreditasi" },
+    { title: "Kalender Akademik", path: "/kalender-akademik" },
+    { title: "S1 Pendidikan Agama Islam", path: "/prodi/pendidikan-agama-islam" },
+    { title: "S1 Pendidikan Bahasa Arab", path: "/prodi/pendidikan-bahasa-arab" },
+    { title: "Agenda Kampus", path: "/agenda" },
+    { title: "Warta Akademik", path: "/warta" },
+    { title: "Pendaftaran Mahasiswa Baru", path: "/pendaftaran" },
+  ];
 
-  // Auto-focus input saat fullscreen terbuka
+  // Auto-focus input saat search dibuka
   useEffect(() => {
     if (isSearchOpen && searchInputRef.current) {
       searchInputRef.current.focus();
     }
   }, [isSearchOpen]);
 
-  const handleSearch = (e) => {
-    // Jalankan jika tombol Enter ditekan ATAU jika dipicu manual (e.key tidak ada)
-    if ((e.key === 'Enter' || !e.key) && searchQuery.trim() !== "") {
-      const query = searchQuery.toLowerCase();
-      
-      if (query.includes('agenda') || query.includes('jadwal') || query.includes('acara')) {
-        navigate(`/agenda?search=${encodeURIComponent(searchQuery)}`);
-      } 
-      else {
-        navigate(`/warta?search=${encodeURIComponent(searchQuery)}`);
-      }
-
-      closeSearch(); 
-      if (expanded) setExpanded(false); 
+  // Logika Live Search (Filtering)
+  useEffect(() => {
+    if (searchQuery.trim() === "") {
+      setFilteredResults([]);
+    } else {
+      const results = pages.filter(page => 
+        page.title.toLowerCase().includes(searchQuery.toLowerCase())
+      );
+      setFilteredResults(results);
     }
-  };
+  }, [searchQuery]);
 
   const closeSearch = () => {
     setIsSearchOpen(false);
     setSearchQuery("");
   };
 
-  const styles = {
-    navbar: {
-      backgroundColor: '#fff',
-      borderBottom: '1px solid #eee',
-      padding: '10px',
-      zIndex: 1100,
-    },
-    btnPendaftaran: {
-      backgroundColor: '#000',
-      color: '#fff',
-      border: 'none',
-      padding: '10px 14px',
-      fontWeight: '600',
-      fontSize: '12px',
-      transition: '0.3s',
-      whiteSpace: 'nowrap'
-    },
-    menuItemLink: {
-      display: 'block',
-      padding: '8px 0',
-      color: '#333',
-      textDecoration: 'none',
-      fontSize: '14px',
-      fontWeight: '500',
-      transition: '0.2s'
-    },
-    bannerContainer: {
-        position: 'relative',
-        overflow: 'hidden',
-        height: '100%',
-        minHeight: '200px',
-        cursor: 'pointer',
-        borderRadius: '8px'
-    }
+  const handleResultClick = (path) => {
+    navigate(path);
+    closeSearch();
+    if (expanded) setExpanded(false);
   };
 
   const menuData = [
@@ -113,171 +94,143 @@ const Navbar = () => {
   ];
 
   const getPath = (item) => {
-    const paths = {
-      "Profil Kami": "/profil",
-      "Visi dan Misi": "/visi-misi",
-      "Dosen dan Tenaga Pendidik": "/dosen",
-      "Logo dan Brand": "/logo",
-      "Akreditasi": "/akreditasi",
-      "Kalender Akademik": "/kalender-akademik",
-      "S1 Pendidikan Agama Islam": "/prodi/pendidikan-agama-islam",
-      "S1 Pendidikan Bahasa Arab": "/prodi/pendidikan-bahasa-arab",
-      "Warta Akademik": "/warta",
-      "Agenda Kampus": "/agenda",
-    };
-    return paths[item] || `/${item.toLowerCase().replace(/\s+/g, '-')}`;
+    const found = pages.find(p => p.title === item);
+    return found ? found.path : `/${item.toLowerCase().replace(/\s+/g, '-')}`;
   };
 
   return (
     <>
       <style>
         {`
-          .custom-sticky-nav { width: 100% !important; }
+          .custom-sticky-nav { width: 100% !important; background-color: #fff; border-bottom: 1px solid #eee; padding: 10px; z-index: 1100; }
           
-          /* Megamenu Desktop */
           @media (min-width: 768px) {
             .nav-item.dropdown { position: static !important; }
             .nav-item.dropdown .dropdown-menu {
-              width: 100vw;
-              max-width: 1440px;
-              left: 50% !important;
-              transform: translateX(-50%) !important;
-              top: 100% !important;
-              margin-top: 0 !important;
-              border: none;
-              border-bottom: 2px solid #eee;
-              box-shadow: 0 15px 30px rgba(0,0,0,0.08);
-              padding: 20px;
+              width: 70%; max-width: 1440px; left: 50% !important; transform: translateX(-50%) !important;
+              top: 100% !important; margin-top: 0 !important; border: none; box-shadow: 0 15px 30px rgba(0,0,0,0.08); padding: 25px;
             }
             .dropdown-toggle::after { display: none !important; }
-            .mega-link:hover { color: ${primaryGreen} !important; padding-left: 5px !important; }
+            .mega-link:hover { color: ${primaryGreen} !important; padding-left: 5px !important; transition: 0.2s; }
           }
 
-          /* Fullscreen Search Overlay */
+          /* --- SEARCH OVERLAY STYLE --- */
           .search-fullscreen {
             position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100vh;
-            background: rgba(255, 255, 255, 0.98);
-            z-index: 2000;
+            top: 0; left: 0;
+            width: 100%; height: 100vh;
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(5px);
+            z-index: 3000;
             display: flex;
-            align-items: center;
             justify-content: center;
+            align-items: flex-start;
+            padding-top: 15vh;
             opacity: ${isSearchOpen ? '1' : '0'};
             visibility: ${isSearchOpen ? 'visible' : 'hidden'};
-            transition: all 0.4s ease-in-out;
+            transition: all 0.3s ease;
           }
 
-          .search-input-container {
-            width: 80%;
-            max-width: 900px;
-            text-align: center;
+          .search-card {
+            background: white;
+            width: 90%;
+            max-width: 600px;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 25px 50px rgba(0,0,0,0.4);
           }
 
-          .search-field-wrapper {
+          .search-header {
             display: flex;
             align-items: center;
-            border-bottom: 3px solid ${primaryGreen};
-            transition: 0.3s;
+            padding: 20px;
+            border-bottom: ${filteredResults.length > 0 ? '1px solid #eee' : 'none'};
           }
 
-          .search-field-wrapper input {
+          .search-header input {
             flex: 1;
             border: none;
-            background: transparent;
-            font-size: 2.5rem;
             outline: none;
-            font-weight: 300;
+            font-size: 1.2rem;
+            margin-left: 15px;
+            color: #333;
           }
 
-          .search-submit-btn {
-            background: none;
-            border: none;
-            padding: 10px;
+          .results-list {
+            max-height: 50vh;
+            overflow-y: auto;
+          }
+
+          .result-item {
+            padding: 15px 25px;
             cursor: pointer;
-            transition: transform 0.2s ease;
+            border-bottom: 1px solid #f9f9f9;
+            display: flex;
+            flex-direction: column;
+            transition: 0.2s;
           }
 
-          .search-submit-btn:hover {
-            transform: scale(1.1);
-          }
+          .result-item:hover { background-color: #f8f9fa; }
+          .result-title { font-weight: 600; color: #222; font-size: 1rem; }
+          .result-path { font-size: 0.8rem; color: #888; margin-top: 2px; }
 
-          .close-search-btn {
+          .close-overlay-btn {
             position: absolute;
             top: 30px;
             right: 40px;
             cursor: pointer;
-            padding: 10px;
-            border-radius: 50%;
+            color: white;
             transition: 0.3s;
           }
-
-          .close-search-btn:hover {
-            background: #f5f5f5;
-          }
-
-          @media (max-width: 767.98px) {
-            .navbar-collapse {
-              max-height: 85vh;
-              overflow-y: auto;
-              padding: 10px 0 40px 0;
-            }
-            .search-field-wrapper input {
-              font-size: 1.2rem;
-            }
-            .search-submit-btn svg {
-              width: 24px; height: 24px;
-            }
-          }
+          .close-overlay-btn:hover { transform: rotate(90deg); }
         `}
       </style>
 
-      {/* --- FULLSCREEN SEARCH OVERLAY --- */}
-      <div className="search-fullscreen">
-        <div className="close-search-btn" onClick={closeSearch}>
-          <CloseIcon size={32} />
+      {/* --- SEARCH OVERLAY (Live Search) --- */}
+      <div className="search-fullscreen" onClick={(e) => e.target === e.currentTarget && closeSearch()}>
+        <div className="close-overlay-btn" onClick={closeSearch}>
+          <CloseIcon color="white" size={32} />
         </div>
-        <div className="search-input-container">
-          <div className="search-field-wrapper">
+
+        <div className="search-card">
+          <div className="search-header">
+            <SearchIcon size={22} color="#888" />
             <input 
               ref={searchInputRef}
-              type="text" 
-              placeholder="Ketik sesuatu..."
+              placeholder="Apa yang ingin Anda cari?" 
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              onKeyDown={handleSearch}
             />
-            {/* TOMBOL SEARCH BARU */}
-            <button className="search-submit-btn" onClick={() => handleSearch({})}>
-              <SearchIcon size={35} color={primaryGreen} />
-            </button>
+            {searchQuery && (
+               <div style={{cursor: 'pointer'}} onClick={() => setSearchQuery("")}>
+                  <CloseIcon size={18} color="#ccc" />
+               </div>
+            )}
           </div>
-          <div className="mt-3 d-flex justify-content-center gap-3">
-             <small className="text-muted">Populer: Beasiswa, Warta Akademik, Agenda</small>
-          </div>
+
+          {filteredResults.length > 0 && (
+            <div className="results-list">
+              {filteredResults.map((result, index) => (
+                <div key={index} className="result-item" onClick={() => handleResultClick(result.path)}>
+                  <span className="result-title">{result.title}</span>
+                  <span className="result-path">{result.path}</span>
+                </div>
+              ))}
+            </div>
+          )}
         </div>
       </div>
 
-      <BootstrapNavbar 
-        expanded={expanded} 
-        onToggle={setExpanded} 
-        expand="md" 
-        className="custom-sticky-nav" 
-        style={styles.navbar}
-        sticky="top"
-      >
+      {/* --- MAIN NAVBAR --- */}
+      <BootstrapNavbar expanded={expanded} onToggle={setExpanded} expand="md" className="custom-sticky-nav" sticky="top">
         <Container>
-          <BootstrapNavbar.Brand as={Link} to="/" onClick={() => {setExpanded(false); setIsSearchOpen(false);}}>
-            <img src={Logo} style={{ height: '40px', width: 'auto' }} alt="Logo" />
+          <BootstrapNavbar.Brand as={Link} to="/" onClick={() => setExpanded(false)}>
+            <img src={Logo} style={{ height: '42px', width: 'auto' }} alt="Logo" />
           </BootstrapNavbar.Brand>
 
           <div className="d-flex align-items-center d-md-none">
             {!expanded && (
-                <div className="me-3" style={{cursor: 'pointer'}} onClick={() => setIsSearchOpen(true)}>
-                    <SearchIcon size={22} />
-                </div>
+              <div className="me-3" onClick={() => setIsSearchOpen(true)}><SearchIcon size={22} /></div>
             )}
             <BootstrapNavbar.Toggle style={{ border: 'none', boxShadow: 'none' }}>
               {expanded ? <CloseIcon /> : <span className="navbar-toggler-icon"></span>}
@@ -287,135 +240,89 @@ const Navbar = () => {
           <BootstrapNavbar.Collapse id="main-nav">
             <Nav className="ms-auto pt-3 pt-md-0 align-items-md-center">
               
-              {/* --- MOBILE VIEW MENU --- */}
-              <div className="d-md-none w-100">
-                <Accordion activeKey={activeKey} onSelect={setActiveKey} flush>
-                  {menuData.map((menu, idx) => (
-                    <div key={idx} className="border-0">
-                      <div 
-                        style={{ display: 'flex', justifyContent: 'space-between', padding: '15px 5px', cursor: 'pointer' }}
-                        onClick={() => setActiveKey(activeKey === idx.toString() ? null : idx.toString())}
-                      >
-                        <span style={{fontSize: '15px', fontWeight: '600', color: activeKey === idx.toString() ? primaryGreen : '#333'}}>{menu.title}</span>
-                        <ChevronIcon isOpen={activeKey === idx.toString()} activeColor={primaryGreen} />
-                      </div>
-                      <Accordion.Collapse eventKey={idx.toString()}>
-                        <ul style={{ listStyle: 'none', paddingLeft: '15px', borderLeft: `2px solid #eee` }}>
-                          {menu.items.map((item, i) => (
-                            <li key={i}>
-                              <Link 
-                                to={getPath(item)} 
-                                style={{ display: 'block', padding: '10px 0', color: '#666', textDecoration: 'none', fontSize: '14px' }}
-                                onClick={() => setExpanded(false)}
-                              >
-                                {item}
-                              </Link>
-                            </li>
-                          ))}
-                        </ul>
-                      </Accordion.Collapse>
-                    </div>
-                  ))}
-                </Accordion>
-                <div className="mt-3">
-                    <button 
-                        style={{...styles.btnPendaftaran, width: '100%'}}
-                        onClick={() => { navigate('/pendaftaran'); setExpanded(false); }}
-                    >
-                        Pendaftaran  &rarr;
-                    </button>
-                </div>
-              </div>
-
-              {/* --- DESKTOP VIEW MENU --- */}
+              {/* --- DESKTOP VIEW --- */}
               <div className="d-none d-md-flex align-items-center">
-                {menuData.map((menu, idx) => {
-                  const isThisOpen = openDropdown === idx;
-                  return (
-                    <NavDropdown 
-                      key={idx}
-                      onMouseEnter={() => setOpenDropdown(idx)}
-                      onMouseLeave={() => setOpenDropdown(null)}
-                      show={isThisOpen}
-                      title={
-                        <div style={{
-                            display: 'inline-flex',
-                            alignItems: 'center',
-                            fontSize: '13px',
-                            fontWeight: '600',
-                            color: isThisOpen ? primaryGreen : '#333',
-                            transition: '0.3s'
-                        }}>
-                          {menu.title}
-                          <ChevronIcon isOpen={isThisOpen} activeColor={primaryGreen} />
-                        </div>
-                      }
-                      id={`nav-dropdown-${idx}`}
-                      className="px-1 px-lg-2"
-                    >
-                      <Container fluid className="py-2">
-                        <Row className="gx-4">
-                          <Col md={5} lg={4}>
-                            <p style={{fontSize: '11px', fontWeight: '700', color: '#999', letterSpacing: '1px', marginBottom: '15px', textTransform: 'uppercase'}}>{menu.title}</p>
-                            <Row>
-                              {menu.items.map((item, i) => (
-                                <Col xs={12} key={i}>
-                                  <Link 
-                                    to={getPath(item)} 
-                                    style={styles.menuItemLink} 
-                                    className="mega-link"
-                                    onClick={() => setOpenDropdown(null)}
-                                  >
-                                    {item}
-                                  </Link>
-                                </Col>
-                              ))}
-                            </Row>
-                          </Col>
-                          <Col md={7} lg={8}>
-                            <div 
-                              style={styles.bannerContainer}
-                              onClick={() => { navigate('/pendaftaran'); setOpenDropdown(null); }}
-                            >
-                              <div style={{
-                                  width: '100%', height: '100%', 
-                                  backgroundImage: `linear-gradient(rgba(0,0,0,0.1), rgba(0, 129, 86, 0.85)), url(${Profil})`,
-                                  backgroundSize: 'cover', backgroundPosition: 'center',
-                                  display: 'flex', 
-                                  alignItems: 'flex-end',
-                                  padding: '30px', 
-                                  color: 'white'
-                              }}>
-                                  <div>
-                                    <h5 className="mb-2" style={{fontWeight: '700'}}>Pendaftaran Mahasiswa Baru</h5>
-                                    <p className="mb-0" style={{opacity: '0.9', fontSize: '13px'}}>Daftar sekarang untuk masa depan cerah!</p>
-                                  </div>
-                              </div>
+                {menuData.map((menu, idx) => (
+                  <NavDropdown 
+                    key={idx} 
+                    show={openDropdown === idx} 
+                    onMouseEnter={() => setOpenDropdown(idx)} 
+                    onMouseLeave={() => setOpenDropdown(null)} 
+                    title={
+                      <div style={{fontSize: '13px', fontWeight: '600', color: openDropdown === idx ? primaryGreen : '#333', transition: '0.3s'}}>
+                        {menu.title}
+                        <ChevronIcon isOpen={openDropdown === idx} activeColor={primaryGreen} />
+                      </div>
+                    }
+                  >
+                    <Container fluid>
+                      <Row className="gx-4">
+                        <Col md={5}>
+                          <p style={{fontSize: '11px', fontWeight: '700', color: '#aaa', textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '15px'}}>{menu.title}</p>
+                          {menu.items.map((item, i) => (
+                            <Link key={i} to={getPath(item)} className="d-block py-2 text-decoration-none text-dark mega-link" style={{fontSize: '14px', fontWeight: '500'}} onClick={() => setOpenDropdown(null)}>
+                              {item}
+                            </Link>
+                          ))}
+                        </Col>
+                        {/* BANNER MEGAMENU */}
+                        <Col md={7}>
+                          <div 
+                            style={{
+                              width: '100%', height: '100%', minHeight: '200px', borderRadius: '12px',
+                              backgroundImage: `linear-gradient(${overlayGreen}, ${overlayGreen}), url(${Profil})`,
+                              backgroundSize: 'cover', backgroundPosition: 'center',
+                              display: 'flex', alignItems: 'flex-end', justifyContent: 'center',
+                              padding: '25px', color: 'white', cursor: 'pointer', transition: '0.3s'
+                            }}
+                            onMouseOver={(e) => e.currentTarget.style.opacity = '0.95'}
+                            onMouseOut={(e) => e.currentTarget.style.opacity = '1'}
+                            onClick={() => { navigate('/pendaftaran'); setOpenDropdown(null); }}
+                          >
+                            <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+                              <h5 style={{ fontWeight: '600', fontSize: '17px', margin: 0 }}>Daftar Untuk Program Sarjana Sekarang</h5>
+                              <span style={{ fontSize: '22px' }}>&rarr;</span>
                             </div>
-                          </Col>
-                        </Row>
-                      </Container>
-                    </NavDropdown>
-                  );
-                })}
+                          </div>
+                        </Col>
+                      </Row>
+                    </Container>
+                  </NavDropdown>
+                ))}
                 
-                {/* Tombol Search Desktop */}
-                <div 
-                    className="me-3 ms-lg-2" 
-                    style={{ cursor: 'pointer', color: isSearchOpen ? primaryGreen : '#333' }}
-                    onClick={() => setIsSearchOpen(true)}
-                >
-                    <SearchIcon size={18} />
+                <div className="mx-3" style={{cursor: 'pointer'}} onClick={() => setIsSearchOpen(true)}>
+                  <SearchIcon size={19} color="#333" />
                 </div>
                 
                 <button 
-                  style={styles.btnPendaftaran}
-                  onMouseOver={(e) => e.target.style.opacity = '0.8'}
-                  onMouseOut={(e) => e.target.style.opacity = '1'}
+                  style={{backgroundColor: '#000', color: '#fff', border: 'none', padding: '10px 20px', fontWeight: '600', fontSize: '12px', borderRadius: '4px'}}
                   onClick={() => navigate('/pendaftaran')}
                 >
-                  Pendaftaran <span style={{ marginLeft: '4px' }}>&rarr;</span>
+                  Pendaftaran &rarr;
                 </button>
+              </div>
+
+              {/* --- MOBILE VIEW --- */}
+              <div className="d-md-none w-100">
+                <Accordion flush>
+                  {menuData.map((menu, idx) => (
+                    <Accordion.Item eventKey={idx.toString()} key={idx} className="border-0">
+                      <Accordion.Header>{menu.title}</Accordion.Header>
+                      <Accordion.Body>
+                        {menu.items.map((item, i) => (
+                          <Link key={i} to={getPath(item)} className="d-block py-2 text-decoration-none text-muted" style={{fontSize: '14px'}} onClick={() => setExpanded(false)}>
+                            {item}
+                          </Link>
+                        ))}
+                      </Accordion.Body>
+                    </Accordion.Item>
+                  ))}
+                </Accordion>
+                <div className="p-3">
+                  <button className="w-100 p-3" style={{backgroundColor: '#000', color: '#fff', border: 'none', fontWeight: '600'}} onClick={() => {navigate('/pendaftaran'); setExpanded(false);}}>
+                    Pendaftaran &rarr;
+                  </button>
+                </div>
               </div>
 
             </Nav>

@@ -59,7 +59,7 @@ const Prodi = () => {
         <MyNavbar />
       </div>
 
-      <main className="Prodi-content py-5">
+      <main className="Prodi-content">
         <Container className="custom-container-1440">
           <nav className="custom-breadcrumb mb-4">
             <Link to="/" className="text-decoration-none text-muted">Home</Link> / 

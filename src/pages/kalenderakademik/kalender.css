@@ -9,7 +9,11 @@
 
 .Kalender-Page {
     font-family: 'Poppins', sans-serif;
-    margin-top: 110px;
+    margin-top: 60px;
+}
+
+.Kalender-content {
+    padding: 60px 70px 20px 70px;
 }
 
 .custom-container-1440 {
@@ -29,10 +33,6 @@
 .custom-breadcrumb .active {
     color: #000;
     font-weight: 500;
-}
-
-.Kalender-content {
-    margin-top: 100px; /* Menyesuaikan fixed header */
 }
 
 /* Tab Styling */
@@ -153,8 +153,8 @@
 }
 
 @media (max-width: 991px) {
-    .Kalender-Page { margin-top: 68px; }
-    .Kalender-content { padding: 0 10px; margin-top: 20px; }
+    .Kalender-Page { margin-top: 20px; }
+    .Kalender-content { padding: 60px 10px 20px 10px; }
     .semester-title { font-size: 18px; }
     .page-main-title { font-size: 2rem; }
 }

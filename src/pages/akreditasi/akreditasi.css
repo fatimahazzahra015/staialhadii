@@ -1,7 +1,11 @@
 /* --- Global & Typography --- */
 .Akreditasi-Page {
     font-family: 'Poppins', sans-serif;
-    margin-top: 110px;
+    margin-top: 60px;
+}
+
+.Akreditasi-content {
+    padding: 60px 70px 20px 70px;
 }
 
 .custom-container-1440 {
@@ -153,8 +157,8 @@
 
 /* --- Responsive --- */
 @media (max-width: 991px) {
-    .Akreditasi-Page { margin-top: 68px; }
-    .Akreditasi-content { padding: 0 10px; }
+    .Akreditasi-Page { margin-top: 20px; }
+    .Akreditasi-content { padding: 60px 10px 20px 10px;}
     .page-main-title { font-size: 2rem; }
     .detail-title { font-size: 1.5rem; }
     .prodi-name { font-size: 14px; }

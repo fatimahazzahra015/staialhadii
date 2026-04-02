@@ -4,6 +4,10 @@
     margin-top: 60px;
 }
 
+.visimisi-content {
+    padding: 60px 70px 20px 70px;
+}
+
 .custom-container-1440 {
     max-width: 1440px !important; /* Sesuai standar index.css Anda */
     margin: 0 auto;
@@ -114,6 +118,6 @@
         margin-top: 40px;
     }
     .visimisi-content { 
-        padding: 0px 10px;
+        padding: 60px 10px 20px 10px;
     }
 }

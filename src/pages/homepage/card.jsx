@@ -42,9 +42,9 @@ const FounderCard = () => {
   }, [currentIndex]);
 
   return (
-    <section className="founder-section">
-      <div className="container px-container-custom py-5">
-        <div className="card bg-black-custom border-0 p-4 p-md-5 d-flex">
+    <section className="founder-section" style={{ backgroundColor: '#000', padding: '50px 0' }}>
+      <div className="container px-container-custom">
+        <div className="card bg-black-custom border-0 d-flex">
           <div className="row g-0 flex-grow-1">
             
             {/* Sisi Kiri: Judul (Statis) */}
@@ -57,7 +57,7 @@ const FounderCard = () => {
             </div>
 
             {/* Sisi Kanan: Slider Konten */}
-            <div className="col-lg-5 d-flex flex-column text-center text-lg-start mt-lg-0">
+            <div className="quote col-lg-5 d-flex flex-column text-center text-lg-start mt-lg-0" style={{ paddingTop: '150px' }}>
               <div className="quote-wrapper mt-auto ps-lg-6">
                 
                 {/* Bagian yang bergeser (Slide Track) */}
