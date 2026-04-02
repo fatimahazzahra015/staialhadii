@@ -28,7 +28,7 @@ const VisiMisi = () => {
         <Header />
         <MyNavbar />
       </div>
-      <main className="visimisi-content py-5">
+      <main className="visimisi-content ">
         <Container className="custom-container-1440">
           {/* Breadcrumb */}
           <nav className="custom-breadcrumb mb-4">

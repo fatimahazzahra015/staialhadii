@@ -12,7 +12,7 @@ const WartaAkademik = () => {
   if (beritaData.length === 0) return null;
 
   return (
-    <section className="warta-section py-5 mx-auto">
+    <section className="warta-section mx-auto">
       <Container> 
         <h2 className="warta-title mb-4 mb-lg-5 text-center text-lg-start">Warta Akademik</h2>
         

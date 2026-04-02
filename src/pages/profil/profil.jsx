@@ -23,7 +23,7 @@ const HomePage = () => {
         <MyNavbar />
       </div>
       
-      <main style={{ paddingTop: '75px' }}>
+      <main style={{ paddingTop: '20px' }}>
         <ProfilHero />
         <ProfilMain />
         <ProfilMisi />

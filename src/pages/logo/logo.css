@@ -1,7 +1,11 @@
 /* logo.css atau brand.css */
 .Logo-Page {
     font-family: 'Poppins', sans-serif;
-    margin-top: 85px; /* Menyesuaikan fixed header */
+    margin-top: 60px; /* Menyesuaikan fixed header */
+}
+
+.logo-content {
+    padding: 60px 70px 20px 70px;
 }
 
 .custom-container-1440 {
@@ -134,10 +138,10 @@
 /* --- Responsive Mobile --- */
 @media (max-width: 991px) {
     .Logo-Page {
-        margin-top: 43px;
+        margin-top: 20px;
     }
     .logo-content {
-        padding: 0px 10px;
+        padding: 60px 10px 20px 10px;
     }
     .brand-section-title {
         font-size: 2rem;

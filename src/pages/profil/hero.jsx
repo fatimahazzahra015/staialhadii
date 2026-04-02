@@ -11,7 +11,7 @@ const ProfilHero = () => {
       <Container>
         {/* Breadcrumb */}
         <nav aria-label="breadcrumb">
-          <ol className="breadcrumb profil-breadcrumb">
+          <ol className="breadcrumb profil-breadcrumb mb-4">
             <li className="breadcrumb-item"><Link to="/">Home</Link></li>
             <li className="breadcrumb-item active text-dark fw-bold" aria-current="page">Profil Kami</li>
           </ol>

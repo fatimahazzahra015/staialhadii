@@ -124,7 +124,7 @@ const Agenda = () => {
         <MyNavbar />
       </div>
 
-      <main className="agenda-main-content py-5">
+      <main className="agenda-main-content">
         <Container className="custom-container-1440">
           {/* Breadcrumb */}
           <nav className="custom-breadcrumb mb-4">

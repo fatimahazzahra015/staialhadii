@@ -83,7 +83,7 @@ const Warta = () => {
         <MyNavbar />
       </div>
       
-      <main className="warta-main-content py-5">
+      <main className="warta-main-content">
         <Container className="custom-container-1440">
           {/* Breadcrumb */}
           <nav className="custom-breadcrumb mb-4">

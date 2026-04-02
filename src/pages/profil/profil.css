@@ -1,13 +1,14 @@
 /* profil.css */
 .profil-hero {
-    padding: 20px 20px 40px 20px;
-    margin-top: 40px;
+    padding: 70px 85px 60px 85px;
+    margin-top: 60px;
     overflow: hidden;
 }
 
 .profil-breadcrumb {
-    font-size: 14px;
-    margin-bottom: 20px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    margin-bottom: 10px;
 }
 
 .profil-breadcrumb a {
@@ -15,11 +16,18 @@
     text-decoration: none;
 }
 
-.profil-title {
-    font-size: 48px;
-    font-weight: 700;
-    margin-bottom: 20px;
+.custom-breadcrumb .active {
     color: #000;
+    font-weight: 500;
+}
+
+
+.profil-title {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 52px;
+    color: #000;
+    letter-spacing: -1px;
 }
 
 .profil-description {
@@ -60,6 +68,7 @@
     .profil-hero {
        margin-bottom: 20px;
        margin-top: 20px;
+       padding: 60px 10px 20px 10px;
     }
     .profil-title {
         font-size: 2rem;
@@ -87,7 +96,7 @@
 
 /* profil.css - Main Content Section */
 .profil-main {
-    padding: 80px 20px;
+    padding: 80px 80px;
     background-color: #f2f2f2;
 }
 
@@ -151,7 +160,7 @@
 
 /* misi.css */
 .profil-misi {
-    padding: 80px 20px 40px 20px;
+    padding: 70px 85px 60px 85px;
     background-color: #ffffff;
 }
 
@@ -223,7 +232,7 @@
 .bg-black-custom {
   background-color: var(--black-color);
   min-height: 550px;
-  width: 97%;
+  width: 100%;
   margin: 0 auto;
   display: flex; 
 }
@@ -312,7 +321,7 @@
 @media (max-width: 991.98px) {
   .bg-black-custom {
     min-height: auto; /* Biarkan card memanjang sesuai konten di mobile */
-    padding: 80px 20px !important;
+    padding: 80px 40px !important;
   }
   
   .founder-title {

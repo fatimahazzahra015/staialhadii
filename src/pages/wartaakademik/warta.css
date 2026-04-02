@@ -4,6 +4,10 @@
     margin-top: 60px;
 }
 
+.warta-main-content {
+    padding: 60px 70px 20px 70px;
+}
+
 .custom-container-1440 {
     max-width: 1440px !important;
     margin: 0 auto;
@@ -289,6 +293,6 @@
         padding: 0 25px;
     }
     .warta-main-content {
-        padding: 0 10px;
+        padding: 60px 10px 20px 10px;
     }
 }

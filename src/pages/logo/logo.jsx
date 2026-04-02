@@ -95,7 +95,7 @@ const Logo = () => {
                 <MyNavbar />
             </div>
             <main className='logo-content'>
-                <Container className="custom-container-1440 py-5">
+                <Container className="custom-container-1440">
                     <nav className="custom-breadcrumb mb-4">
                         <Link to="/" className="text-decoration-none text-muted">Home</Link> / 
                         <span className="active mx-1 text-dark fw-bold">Logo dan Brand</span>

@@ -2,6 +2,9 @@
     font-family: 'Poppins', sans-serif !important;
     margin-top: 60px;
 }
+.Prodi-content {
+    padding: 60px 70px 20px 70px;
+}
 
 .custom-container-1440 {
     max-width: 1440px !important;
@@ -100,5 +103,5 @@
     }
     .page-main-title { font-size: 2rem; }
     .sidebar-cta-box { margin-top: 30px; }
-    .Prodi-content { padding: 0px 10px; }
+    .Prodi-content { padding: 60px 10px 20px 10px;}
 }

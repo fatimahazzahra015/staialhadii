@@ -43,7 +43,7 @@ const WartaDetail = () => {
         <Header />
         <MyNavbar />
       </div>
-      <main className="warta-main-content py-5">
+      <main className="warta-main-content">
         <Container className="custom-container-1440">
           <nav className="custom-breadcrumb mb-4">
             <Link to="/" className="text-decoration-none text-muted">Home</Link> / 

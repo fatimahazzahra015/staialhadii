@@ -17,7 +17,7 @@ const ProgramStudi = () => {
   ];
 
   return (
-    <section className="program-studi-section py-5 mx-auto">
+    <section className="program-studi-section mx-auto">
       <Container className="program-container">
         <div className="text-center mb-5 px-3">
           <h2 className="section-title-main">Program Studi</h2>

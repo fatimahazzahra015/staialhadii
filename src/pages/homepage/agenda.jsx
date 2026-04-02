@@ -1,5 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+// 1. Import data allAgendas dari file Agenda.jsx
 import { allAgendas } from '../agenda/agenda'; 
 import './homepage.css';
 
@@ -18,7 +19,7 @@ const AgendaKampus = () => {
   };
 
   return (
-    <section className="agenda-section py-5 px-2">
+    <section className="agenda-section" style={{ padding: '100px 80px' }}>
       <div className="container px-container-custom">
         <h2 className="section-title-agenda mb-5">
           Agenda Kegiatan Kampus
