@@ -1,7 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-// 1. Import data allAgendas dari file Agenda.jsx
-import { allAgendas } from '../agenda/Agenda'; 
+import { allAgendas } from '../agenda/agenda'; 
 import './homepage.css';
 
 const AgendaKampus = () => {
