@@ -21,7 +21,7 @@ const ProgramStudi = () => {
       <Container className="program-container">
         <div className="text-center mb-5 px-3">
           <h2 className="section-title-main">Program Studi</h2>
-          <p className="section-subtitle">
+          <p className="section-subtitle" style={{ color: '#333', fontSize: '18px', fontWeight: '400' }}>
             Pilih program studi yang sesuai dengan minat dan bakat Anda untuk membangun masa depan yang cerah.
           </p>
         </div>
