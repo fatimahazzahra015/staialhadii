@@ -1,7 +1,6 @@
-/* --- Wrapper & Layout --- */
 .hero-wrapper {
   background-color: #fff;
-  padding: 20px; /* Jarak bingkai luar */
+  padding: 20px; 
 }
 
 .hero-swiper {
@@ -19,7 +18,7 @@
 }
 
 .hero-container {
-  max-width: 1440px !important; /* Batas konten dalam agar lebih manis */
+  max-width: 1440px !important; 
 }
 
 /* --- Typography --- */
@@ -28,7 +27,7 @@
   font-weight: 600;
   line-height: 1.1;
   margin: 30px;
-  font-size: clamp(2rem, 5vw, 4rem); /* Ukuran font adaptif */
+  font-size: clamp(2rem, 5vw, 4rem);
 }
 
 .hero-subtitle-text {
@@ -91,7 +90,7 @@
   .hero-section {
     height: auto;
     min-height: 450px;
-    padding-bottom: 80px; /* Ruang agar tidak nabrak pagination */
+    padding-bottom: 80px; 
   }
 
   .hero-title {
@@ -128,7 +127,7 @@
 
 .warta-title {
   font-weight: 600;
-  font-size: clamp(2rem, 4vw, 3rem); /* Responsive font size */
+  font-size: clamp(2rem, 4vw, 3rem);
   color: #000;
 }
 
@@ -146,13 +145,11 @@
 }
 
 /* --- Typography News --- */
-/* Judul Berita Utama (Highlight) */
 .main-news-title {
-  font-size: 1rem; /* Lebih besar di desktop */
+  font-size: 1rem;
   line-height: 1.2;
 }
 
-/* Judul Berita Kecil */
 .news-sub-title {
   font-size: 1rem;
   font-weight: 600;
@@ -175,18 +172,16 @@
     padding: 60px 20px;
   }
 
-  /* Berita Utama Menjadi Highlight di Mobile */
   .news-img-lg {
-    height: 280px; /* Lebih tinggi sedikit agar visualnya dominan */
+    height: 280px; 
     margin-bottom: 10px;
   }
 
   .main-news-title {
-    font-size: 1rem; /* Ukuran menonjol dibanding berita kecil */
+    font-size: 1rem;
     margin-top: 5px;
   }
 
-  /* Berita kecil tetap proporsional */
   .news-img-sm {
     height: 170px; 
   }
@@ -197,8 +192,8 @@
 }
 /* --- Section Profil Singkat --- */
 .profil-singkat-section {
-  background-color: #F2F2F2; /* Warna yang diminta */
-  padding: 120px 60px; /* Padding atas-bawah yang seimbang */
+  background-color: #F2F2F2;
+  padding: 120px 60px;
   position: relative;
   overflow: visible;
 }
@@ -241,7 +236,7 @@
   width: 100%;
   display: flex;
   justify-content: flex-end;
-  padding-top: 60px; /* Ruang untuk overlay yang meluap ke atas */
+  padding-top: 60px; 
 }
 
 .img-main {
@@ -269,13 +264,13 @@
   width: 100%;
   height: 320px;
   object-fit: cover;
-  border: 12px solid #F2F2F2; /* Bingkai putih agar kontras dengan BG abu-abu */
+  border: 12px solid #F2F2F2;
 }
 
 /* --- Responsive Tablet/Mobile --- */
 @media (max-width: 991px) {
   .profil-singkat-section {
-    padding: 80px 20px; /* Padding lebih kecil di mobile */
+    padding: 80px 20px;
   }
 
   .profil-title {
@@ -387,7 +382,7 @@
 }
 
 .btn-daftar-studi:hover {
-  background-color: #031C15; /* Sesuaikan primary color */
+  background-color: #031C15;
   color: #fff;
 }
 
@@ -465,7 +460,6 @@
   line-height: 1.4;
 }
 
-/* Container pembungkus utama */
 .quote-wrapper {
   min-height: 280px;
   display: flex;
@@ -475,24 +469,21 @@
   position: relative;
 }
 
-/* Track Animasi */
 .slide-track {
   animation: slideInRight 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 
-/* Keyframes Geser dari Kanan ke Kiri */
 @keyframes slideInRight {
   0% {
-    transform: translateX(100px); /* Mulai dari kanan sejauh 100px */
+    transform: translateX(100px);
     opacity: 0;
   }
   100% {
-    transform: translateX(0); /* Berhenti di posisi normal */
+    transform: translateX(0);
     opacity: 1;
   }
 }
 
-/* Navigasi Panah tetap diam */
 .btn-nav {
   background: transparent;
   border: none;
@@ -514,7 +505,7 @@
 /* Responsif */
 @media (max-width: 767px) {
   .bg-black-custom {
-    min-height: auto; /* Biarkan card memanjang sesuai konten di mobile */
+    min-height: auto;
     padding: 80px 40px !important;
   }
   
@@ -523,13 +514,13 @@
   }
 
   .quote-wrapper {
-    margin-top: 2rem !important; /* Jarak antara judul dan quote di mobile */
+    margin-top: 2rem !important; 
   }
 }
 
 @media (min-width: 992px) {
   .quote-wrapper {
-    max-width: 420px; /* Ukuran lebar quote agar persis seperti di gambar */
+    max-width: 420px; 
     align-self: flex-end;
   }
 }
@@ -561,20 +552,20 @@
 
 .agenda-img-wrapper {
   width: 100%;
-  aspect-ratio: 3 / 4; /* Membuat gambar tegak seperti di screenshot */
+  aspect-ratio: 3 / 4;
   overflow: hidden;
-  border-radius: 4px; /* Sudut tajam sesuai gambar */
+  border-radius: 4px; 
 }
 
 .agenda-img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Menjaga gambar tidak gepeng */
+  object-fit: cover;
   transition: transform 0.3s ease;
 }
 
 .agenda-card:hover .agenda-img {
-  transform: scale(1.05); /* Efek zoom saat hover */
+  transform: scale(1.05);
 }
 
 .agenda-card-title {
@@ -606,7 +597,6 @@
   color: white;
 }
 
-/* Penyesuaian Mobile */
 @media (max-width: 768px) {
   .agenda-section {
     padding: 80px 10px !important;

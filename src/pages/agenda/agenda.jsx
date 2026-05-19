@@ -8,7 +8,6 @@ import Footer from '../../components/footer';
 import AgendaImg from '../../assets/warta.png';
 import './agenda.css';
 
-// Data Dummy Agenda Lengkap
 export const allAgendas = [
   {
     id: 1,
@@ -89,7 +88,6 @@ const Agenda = () => {
 
   const categories = ['Semua', 'Workshop', 'Seminar', 'Event', 'Lomba'];
 
-  // 1. Logika Filter
   const filteredData = useMemo(() => {
     const result = activeCategory === 'Semua' 
       ? allAgendas 
@@ -98,7 +96,6 @@ const Agenda = () => {
     return result;
   }, [activeCategory]);
 
-  // 2. Logika Pagination
   const totalPages = Math.ceil(filteredData.length / itemsPerPage);
   
   const currentAgendas = useMemo(() => {
@@ -114,7 +111,7 @@ const Agenda = () => {
 
   const handleCategoryChange = (cat) => {
     setActiveCategory(cat);
-    setCurrentPage(1); // Reset ke halaman 1 saat ganti kategori
+    setCurrentPage(1); 
   };
 
   return (
@@ -126,7 +123,6 @@ const Agenda = () => {
 
       <main className="agenda-main-content">
         <Container className="custom-container-1440">
-          {/* Breadcrumb */}
           <nav className="custom-breadcrumb mb-4">
             <Link to="/" className="text-decoration-none text-muted">Home</Link>
             <span className="mx-2">/</span>
@@ -135,7 +131,6 @@ const Agenda = () => {
 
           <h1 className="main-page-title mb-4">Agenda Kampus</h1>
 
-          {/* Filter Kategori */}
           <div className="category-filter-wrapper mb-5 d-flex gap-4 overflow-auto pb-2">
             {categories.map((cat, i) => (
               <button
@@ -148,7 +143,6 @@ const Agenda = () => {
             ))}
           </div>
 
-          {/* Grid Agenda */}
           <Row>
             {currentAgendas.length > 0 ? (
               currentAgendas.map((item) => (
@@ -177,8 +171,7 @@ const Agenda = () => {
               </Col>
             )}
           </Row>
-
-          {/* Pagination */}
+          
           {totalPages > 1 && (
             <div className="d-flex justify-content-center mt-4">
               <Pagination className="custom-pagination gap-2">

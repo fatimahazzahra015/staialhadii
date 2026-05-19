@@ -1,6 +1,6 @@
 import React from 'react';
 import { Envelope } from 'react-bootstrap-icons';
-import { Container } from 'react-bootstrap'; // Tambahkan Container
+import { Container } from 'react-bootstrap'; 
 
 const Header = () => {
   const primaryDark = '#031C15';
@@ -45,9 +45,7 @@ const Header = () => {
         `}
       </style>
 
-      {/* d-md-flex pada wrapper utama */}
       <div className="custom-header d-none d-md-flex">
-        {/* Container membungkus isi agar tidak melebihi 1440px */}
         <Container className="header-container">
           
           {/* Sisi Kiri */}

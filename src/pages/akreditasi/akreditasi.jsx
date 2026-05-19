@@ -79,7 +79,6 @@ const Akreditasi = () => {
             </Col>
           </Row>
 
-          {/* --- SECTION TABEL (Desktop Only) --- */}
           <section className="table-section mt-5 d-none d-lg-block">
             <div className="table-responsive custom-table-wrapper">
               <Table hover className="align-middle mb-0">
@@ -111,7 +110,6 @@ const Akreditasi = () => {
             </div>
           </section>
 
-          {/* --- SECTION ACCORDION (Mobile Only) --- */}
           <section className="accordion-section mt-4 d-lg-none">
             <div className="accordion-header-custom p-3">
               <Row className="mx-0">

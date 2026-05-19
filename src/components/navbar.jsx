@@ -36,11 +36,9 @@ const Navbar = () => {
   const navigate = useNavigate();
   const searchInputRef = useRef(null);
   
-  // Warna Brand Utama
   const primaryGreen = "#052B1F"; 
   const overlayGreen = "rgba(5, 43, 31, 0.85)";
 
-  // Data Halaman untuk Fitur Pencarian
   const pages = [
     { title: "Profil Kami", path: "/profil" },
     { title: "Visi dan Misi", path: "/visi-misi" },
@@ -56,14 +54,12 @@ const Navbar = () => {
     { title: "Pendaftaran Mahasiswa Baru", path: "/pendaftaran" },
   ];
 
-  // Auto-focus input saat search dibuka
   useEffect(() => {
     if (isSearchOpen && searchInputRef.current) {
       searchInputRef.current.focus();
     }
   }, [isSearchOpen]);
 
-  // Logika Live Search (Filtering)
   useEffect(() => {
     if (searchQuery.trim() === "") {
       setFilteredResults([]);
@@ -185,8 +181,6 @@ const Navbar = () => {
           .close-overlay-btn:hover { transform: rotate(90deg); }
         `}
       </style>
-
-      {/* --- SEARCH OVERLAY (Live Search) --- */}
       <div className="search-fullscreen" onClick={(e) => e.target === e.currentTarget && closeSearch()}>
         <div className="close-overlay-btn" onClick={closeSearch}>
           <CloseIcon color="white" size={32} />
@@ -221,7 +215,6 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* --- MAIN NAVBAR --- */}
       <BootstrapNavbar expanded={expanded} onToggle={setExpanded} expand="md" className="custom-sticky-nav" sticky="top">
         <Container>
           <BootstrapNavbar.Brand as={Link} to="/" onClick={() => setExpanded(false)}>
@@ -265,7 +258,6 @@ const Navbar = () => {
                             </Link>
                           ))}
                         </Col>
-                        {/* BANNER MEGAMENU */}
                         <Col md={7}>
                           <div 
                             style={{

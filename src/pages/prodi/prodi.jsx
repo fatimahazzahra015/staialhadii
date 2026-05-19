@@ -9,13 +9,12 @@ import ProdiImg from '../../assets/profil.png';
 import './prodi.css';
 
 const Prodi = () => {
-  const { slug } = useParams(); // Mengambil 'pai' atau 'pba' dari URL
+  const { slug } = useParams();
   
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [slug]);
 
-  // Data Konten Dinamis
   const contentData = {
     'pendidikan-agama-islam': {
       title: "S1 Pendidikan Agama Islam",
@@ -43,7 +42,6 @@ const Prodi = () => {
     }
   };
 
-  // Ambil data berdasarkan slug, fallback ke PAI jika tidak ditemukan
   const currentContent = contentData[slug] || contentData['pendidikan-agama-islam'];
 
   return (
@@ -113,7 +111,6 @@ const Prodi = () => {
                 </ul>
               </section>
               
-              {/* Tombol Share Tetap Sama */}
             </Col>
 
             <Col lg={4}>

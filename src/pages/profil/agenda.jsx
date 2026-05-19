@@ -1,13 +1,11 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-// 1. Import data allAgendas dari file Agenda.jsx
 import { allAgendas } from '../agenda/agenda'; 
 import './profil.css';
 
 const AgendaKampus = () => {
   const navigate = useNavigate();
 
-  // 2. Ambil hanya 3 data teratas untuk ditampilkan di Homepage
   const displayAgendas = allAgendas.slice(0, 3);
 
   const handleLihatSemua = () => {
@@ -28,14 +26,12 @@ const AgendaKampus = () => {
         <div className="row g-4">
           {displayAgendas.map((item) => (
             <div key={item.id} className="col-md-6 col-lg-4">
-              {/* 3. Tambahkan onClick untuk masuk ke Detail */}
               <div 
                 className="agenda-card h-100" 
                 style={{ cursor: 'pointer' }}
                 onClick={() => handleDetailAgenda(item.id)}
               >
                 <div className="agenda-img-wrapper mb-3">
-                  {/* Gunakan item.img sesuai struktur data di Agenda.jsx */}
                   <img src={item.img} alt={item.title} className="img-fluid agenda-img" />
                 </div>
                 <div className="agenda-content">
@@ -49,7 +45,6 @@ const AgendaKampus = () => {
           ))}
         </div>
 
-        {/* 4. Tombol Lihat Semua ke Halaman Agenda */}
         <div className="text-center mt-5">
           <button 
             className="btn-lihat-semua d-inline-flex align-items-center"

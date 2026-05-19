@@ -1,9 +1,8 @@
-/* Struktur Header dan Content */
 .header-nav-wrapper {
     position: fixed;
     top: 0;
     width: 100%;
-    z-index: 1000; /* Header tetap di atas konten */
+    z-index: 1000;
 }
 
 .Dosen-Page {
@@ -14,15 +13,13 @@
     padding: 60px 70px 20px 70px;
 }
 
-/* Modal Z-Index Fix */
 .modal {
-    z-index: 1060 !important; /* Pastikan lebih tinggi dari header (1000) */
+    z-index: 1060 !important; 
 }
 .modal-backdrop {
     z-index: 1050 !important;
 }
 
-/* Page Style */
 .page-title { 
     font-size: 52px; 
     font-weight: 600; 
@@ -34,7 +31,6 @@
     color: #888; 
 }
 
-/* Filter Container - Menghapus tombol navigasi */
 .filter-container {
     border-bottom: 1px solid #eee;
 }
@@ -43,11 +39,11 @@
     display: flex;
     gap: 30px;
     overflow-x: auto;
-    scrollbar-width: none; /* Sembunyikan scrollbar di Firefox */
+    scrollbar-width: none;
 }
 
 .filter-scrollable::-webkit-scrollbar {
-    display: none; /* Sembunyikan scrollbar di Chrome/Safari */
+    display: none;
 }
 
 .filter-item { 
@@ -76,17 +72,15 @@
     background: #00a651; 
 }
 
-/* Card Dosen */
 .img-container { 
     border-radius: 8px; 
     overflow: hidden; 
     aspect-ratio: 3/4; 
     display: flex; 
     align-items: flex-end;
-    /* Tambahkan ini agar container gambar bisa rata tengah jika parent-nya lebih lebar */
     margin-left: auto;
     margin-right: auto;
-    max-width: 100%; /* Memastikan tidak melebihi lebar layar */
+    max-width: 100%;
 }
 
 .img-container-modal {
@@ -119,7 +113,6 @@
     color: #666; 
 }
 
-/* Pagination */
 .custom-pagination-stai .page-link { 
     color: #333; border: 1px solid #dee2e6; margin: 0 4px; border-radius: 4px !important; padding: 8px 16px;
 }
@@ -127,7 +120,6 @@
     background-color: #00a651; border-color: #00a651; color: #fff; 
 }
 
-/* Modal Tabs */
 .modal-tabs .nav-link { border: none !important; color: #888; font-weight: 600; font-size: 13px; }
 .modal-tabs .nav-link.active { background-color: #1a1a1a !important; color: #fff !important; border-radius: 4px; }
 
@@ -143,11 +135,10 @@
     }
     .img-container { 
         width: 100%; 
-        max-width: 320px; /* Batasi lebar maksimal di mobile agar tidak terlalu raksasa */
+        max-width: 320px;
         height: auto;
     }
     
-    /* Memastikan wrapper card juga menginstruksikan kontennya di tengah */
     .dosen-card-wrapper {
         display: flex;
         flex-direction: column;

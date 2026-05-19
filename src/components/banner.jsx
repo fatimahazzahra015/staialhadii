@@ -14,9 +14,9 @@ const Banner = () => {
     overflow: 'hidden',
     display: 'block',
     margin: '0',        
-    marginBottom: '-1px', // MEMAKSA menempel dengan elemen di bawahnya
+    marginBottom: '-1px', 
     padding: '0',
-    border: 'none',       // Menghilangkan potensi border sisa
+    border: 'none', 
   };
 
   const bannerOverlayStyle = {
@@ -24,7 +24,7 @@ const Banner = () => {
     top: 0,
     left: 0,
     width: '100%',
-    height: '100%', // DIUBAH: Dari 110% ke 100% agar tidak "tumpah" ke bawah
+    height: '100%',
     background: 'rgba(5, 43, 31, 0.65)',
     display: 'flex',
     alignItems: 'center',
@@ -61,10 +61,8 @@ const Banner = () => {
 
   return (
     <section style={bannerSectionStyle}>
-      {/* Menambahkan h-100 dan w-100 pada overlay */}
       <div className="banner-overlay" style={bannerOverlayStyle}>
         <div className="container text-center text-white">
-          {/* Menambahkan g-0 untuk menghilangkan margin negatif row bootstrap */}
           <div className="row justify-content-center g-0">
             <div className="col-lg-10">
               <h1 className="mb-4" style={bannerTitleStyle}>

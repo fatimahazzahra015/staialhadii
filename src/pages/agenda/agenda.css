@@ -1,4 +1,3 @@
-/* Gaya Khusus Agenda */
 .Agenda-Page, .Agenda-Page-Detail {
     font-family: 'Poppins', sans-serif !important;
     margin-top: 60px;
@@ -91,7 +90,6 @@
     font-size: 15px;
 }
 
-/* Kotak Ikon Sosial Media */
 .social-box {
     width: 35px;
     height: 35px;
@@ -104,11 +102,9 @@
 }
 .social-box:hover { opacity: 0.8; transform: translateY(-2px); }
 
-/* Efek Hover Poster */
 .hov-scale { transition: 0.3s; }
 .hov-scale:hover { transform: scale(1.02); }
 
-/* Container Gambar Agenda Lainnya */
 .other-agenda-img {
     aspect-ratio: 3/4;
     object-fit: cover;
@@ -122,7 +118,7 @@
 }
 
 .custom-pagination .page-item.active .page-link {
-  background-color: #00674c; /* Sesuaikan warna hijau kampusmu */
+  background-color: #00674c;
   border-color: #00674c;
   color: white;
 }

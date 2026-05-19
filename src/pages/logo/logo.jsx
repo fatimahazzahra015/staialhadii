@@ -18,7 +18,7 @@ const Logo = () => {
         {
             title: "Bentuk Kubah Masjid",
             desc: "Bentuk lengkungan hijau tua yang menyerupai kubah masjid atau gerbang islami merupakan representasi visual yang paling dominan. Kubah Masjid: Melambangkan identitas keisiaman yang kuat dan menjadi wadah bagi pengembangan ilmu-ilmu agama. Ini menunjukkan STAI Al-Hadi Bojonegoro adalah lembaga pendidikan Islam yang berlandaskan ajaran Al-Qur'an dan Sunnah.",
-            icon: LogoKubah // Ganti dengan ikon spesifik jika ada
+            icon: LogoKubah 
         },
         {
             title: "Kaligrafi Arab 'Al-Hadi'",
@@ -43,7 +43,6 @@ const Logo = () => {
 
     ];
 
-    // Data Warna Lengkap dengan Filosofi
     const colors = [
         { 
             name: "Emas", 
@@ -71,18 +70,16 @@ const Logo = () => {
         }
     ];
 
-    // Daftar File Logo untuk Diunduh
     const downloadLogos = [
         { name: "Logo Primary Color (PNG)", file: MainLogo, type: "Logo Primary" },
-        { name: "Logo Mono Black (PNG)", file: MainLogo, type: "Logo Mono" }, // Ganti file aslinya
-        { name: "Logo Mono White (PNG)", file: MainLogo, type: "Logo Mono White" }  // Ganti file aslinya
+        { name: "Logo Mono Black (PNG)", file: MainLogo, type: "Logo Mono" },
+        { name: "Logo Mono White (PNG)", file: MainLogo, type: "Logo Mono White" } 
     ];
 
-    // Fungsi untuk mengunduh file secara nyata
     const handleDownload = (fileUrl, fileName) => {
         const link = document.createElement('a');
         link.href = fileUrl;
-        link.download = fileName; // Tentukan nama file saat didownload
+        link.download = fileName; 
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
@@ -127,7 +124,6 @@ const Logo = () => {
                         ))}
                     </div>
 
-                    {/* --- Palet Warna INTERAKTIF --- */}
                     <div className="color-palette-section">
                         <div className="color-grid shadow">
                             {colors.map((color, index) => (
@@ -140,7 +136,6 @@ const Logo = () => {
                         </div>
                     </div>
 
-                    {/* --- Download Section BERFUNGSI --- */}
                     <div className="download-section mt-5 pt-4">
                         {downloadLogos.map((item, index) => (
                             <div key={index} className="download-logo-card  ">

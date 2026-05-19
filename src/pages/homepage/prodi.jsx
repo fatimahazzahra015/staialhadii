@@ -4,7 +4,6 @@ import Profil from '../../assets/profil.png';
 import './homepage.css';
 
 const ProgramStudi = () => {
-  // Menggunakan null agar semua tertutup di awal, dan hanya simpan 1 index
   const [openIndex, setOpenIndex] = useState(null); 
 
   const toggleProgram = (index) => {
@@ -32,7 +31,6 @@ const ProgramStudi = () => {
             
             return (
               <div key={index} className="program-item-container">
-                {/* Header saat Tertutup */}
                 {!isOpen && (
                   <div 
                     className="closed-card d-flex justify-content-between align-items-center"
@@ -43,9 +41,8 @@ const ProgramStudi = () => {
                   </div>
                 )}
 
-                {/* Konten saat Terbuka */}
                 <Collapse in={isOpen}>
-                  <div> {/* Wrapper div untuk animasi Collapse yang smooth */}
+                  <div>
                     <div 
                       className="opened-bg" 
                       style={{ backgroundImage: `linear-gradient(rgba(0, 45, 30, 0.85), rgba(0, 45, 30, 0.85)), url(${item.img})` }}

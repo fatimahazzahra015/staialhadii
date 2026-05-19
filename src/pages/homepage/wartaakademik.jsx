@@ -1,12 +1,10 @@
 import React from 'react';
 import { Container, Row, Col, Button, Card } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-// Import data dari file Warta
-import { allNews } from '../wartaakademik/warta.jsx'; // Pastikan path filenya benar
+import { allNews } from '../wartaakademik/warta.jsx'; 
 import './homepage.css';
 
 const WartaAkademik = () => {
-  // Ambil 5 berita terbaru saja untuk ditampilkan di homepage
   const beritaData = allNews.slice(0, 5);
 
   if (beritaData.length === 0) return null;
@@ -17,7 +15,6 @@ const WartaAkademik = () => {
         <h2 className="warta-title mb-4 mb-lg-5 text-center text-lg-start">Warta Akademik</h2>
         
         <Row>
-          {/* BERITA UTAMA (HIGHLIGHT) */}
           <Col lg={6} xs={12} className="mb-5 mb-lg-0">
             <Link to={`/warta/${beritaData[0].id}`} className="text-decoration-none">
               <Card className="main-news-card border-0 bg-transparent hov-card">
@@ -30,7 +27,6 @@ const WartaAkademik = () => {
             </Link>
           </Col>
 
-          {/* LIST BERITA KANAN */}
           <Col lg={6} xs={12}>
             <Row>
               {beritaData.slice(1, 5).map((item) => (

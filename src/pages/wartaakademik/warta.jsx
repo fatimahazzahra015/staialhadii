@@ -85,7 +85,6 @@ const Warta = () => {
       
       <main className="warta-main-content">
         <Container className="custom-container-1440">
-          {/* Breadcrumb */}
           <nav className="custom-breadcrumb mb-4">
             <Link to="/" className="text-decoration-none text-muted">Home</Link> 
             <span className="mx-2">/</span> 
@@ -94,7 +93,6 @@ const Warta = () => {
 
           <h1 className="main-page-title mb-4">Warta Akademik</h1>
 
-          {/* Category Filter - Hanya muncul jika ada berita */}
           {allNews.length > 0 && (
             <div className="category-filter-wrapper mb-5 d-flex gap-4">
               {categories.map((cat, i) => (

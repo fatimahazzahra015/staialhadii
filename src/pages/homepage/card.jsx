@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import './homepage.css';
 
 const FounderCard = () => {
-  // 1. Data Quote Para Pendiri
   const founders = [
     {
       id: 1,
@@ -26,7 +25,6 @@ const FounderCard = () => {
 
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  // 2. Fungsi Navigasi
   const nextSlide = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % founders.length);
   };
@@ -35,7 +33,6 @@ const FounderCard = () => {
     setCurrentIndex((prevIndex) => (prevIndex === 0 ? founders.length - 1 : prevIndex - 1));
   };
 
-  // 3. Autoplay: Bergeser otomatis setiap 5 detik
   useEffect(() => {
     const interval = setInterval(nextSlide, 5000);
     return () => clearInterval(interval);
@@ -46,8 +43,7 @@ const FounderCard = () => {
       <div className="container px-container-custom">
         <div className="card bg-black-custom border-0 d-flex">
           <div className="row g-0 flex-grow-1">
-            
-            {/* Sisi Kiri: Judul (Statis) */}
+
             <div className="col-lg-7 text-center text-lg-start">
               <h1 className="founder-title text-white">
                 Pesan Para Pendiri<br className="d-none d-lg-block" />
@@ -56,11 +52,9 @@ const FounderCard = () => {
               </h1>
             </div>
 
-            {/* Sisi Kanan: Slider Konten */}
             <div className="quote col-lg-5 d-flex flex-column text-center text-lg-start mt-lg-0" style={{ paddingTop: '150px' }}>
               <div className="quote-wrapper mt-auto ps-lg-6">
                 
-                {/* Bagian yang bergeser (Slide Track) */}
                 <div key={currentIndex} className="slide-track">
                   <blockquote className="quote-text text-white mb-4">
                     "{founders[currentIndex].quote}"
@@ -79,7 +73,6 @@ const FounderCard = () => {
                   </div>
                 </div>
 
-                {/* Navigasi Panah (Statis/Tidak ikut bergeser) */}
                 <div className="d-flex gap-4 justify-content-center justify-content-lg-start">
                   <button className="btn-nav" onClick={prevSlide} aria-label="Previous Slide">
                     <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">

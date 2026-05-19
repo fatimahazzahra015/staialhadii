@@ -11,9 +11,8 @@
     margin: 0 auto;
 }
 
-/* Judul Sesuai Gambar */
 .page-main-title {
-    font-size: 42px; /* Disesuaikan agar proporsional */
+    font-size: 42px;
     font-weight: 700;
     color: var(--black-color);
     margin-top: 10px;
@@ -25,15 +24,13 @@
     color: #333;
 }
 
-/* Subtitle Section */
 .section-subtitle {
     font-size: 24px;
     font-weight: 700;
     margin-bottom: 1.2rem;
-    color: #1a1a1a; /* Hitam tegas sesuai gambar ef5424 */
+    color: #1a1a1a; 
 }
 
-/* Info Boxes Gray */
 .info-box-gray {
     background-color: #f2f2f2;
     padding: 30px;
@@ -57,7 +54,6 @@
     color: #555;
 }
 
-/* List Styling */
 .custom-list {
     padding-left: 1.2rem;
     list-style-type: disc;
@@ -76,7 +72,6 @@
     font-size: 0.95rem;
 }
 
-/* Sidebar CTA (Sticky) */
 .sidebar-cta-box {
     background-color: #000;
     color: #fff;
@@ -85,7 +80,6 @@
     text-align: center;
 }
 
-/* Button & Icons */
 .share-icon {
     width: 45px;
     height: 45px;

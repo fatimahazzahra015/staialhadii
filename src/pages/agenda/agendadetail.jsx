@@ -36,23 +36,18 @@ const AgendaDetail = () => {
           </nav>
 
           <Row className="gx-lg-5">
-            {/* Bagian Kiri (Desktop) / Konten Utama */}
             <Col lg={8} className="order-1">
-              {/* 1. Judul (Selalu di atas) */}
               <h1 className="fw-bold mb-4" style={{ fontSize: 'clamp(28px, 5vw, 42px)', color: '#1a1a1a' }}>
                 {item.title}
               </h1>
             </Col>
 
-            {/* Bagian Kanan (Desktop) / Sidebar yang naik ke atas di Mobile */}
             <Col lg={4} className="order-2 order-lg-3">
               <div className="sticky-sidebar" style={{ top: '100px' }}>
-                {/* 2. Gambar (Muncul setelah Judul di Mobile) */}
                 <div className="mb-4 shadow-sm rounded overflow-hidden cursor-pointer" onClick={() => setShowModal(true)}>
                   <img src={item.img} alt={item.title} className="img-fluid w-100 hov-scale" />
                 </div>
 
-                {/* 3. Info Box (Jam, Tanggal, Lokasi, Button) */}
                 <div className="p-4 mb-4" style={{ backgroundColor: '#F3F4F6', borderRadius: '4px' }}>
                   <div className="mb-3">
                     <span className="d-block text-muted" style={{ fontSize: '13px' }}>Tanggal: <span className="text-dark fw-semibold ms-1">{item.date}</span></span>
@@ -70,7 +65,6 @@ const AgendaDetail = () => {
               </div>
             </Col>
 
-            {/* 4. Deskripsi (Turun ke bawah setelah Info Box di Mobile) */}
             <Col lg={8} className="order-3 order-lg-2">
               <div className="agenda-content">
                 <p style={{ textAlign: 'justify', fontSize: '15px', color: '#444', lineHeight: '1.8' }}>{item.desc}</p>
@@ -81,7 +75,6 @@ const AgendaDetail = () => {
                   Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, explicabo.
                 </p>
 
-                {/* Ikon Sosial Media */}
                 <div className="d-flex gap-3 mt-5 mb-5 align-items-center">
                   <a href={`https://wa.me/?text=${encodeURIComponent(item.title + " " + currentUrl)}`} target="_blank" rel="noreferrer" className="d-flex align-items-center justify-content-center text-white text-decoration-none shadow-sm hov-scale" style={{ width: '45px', height: '45px', backgroundColor: '#58d83d', borderRadius: '4px' }}>
                     <i className="bi bi-whatsapp fs-4"></i>
@@ -100,7 +93,6 @@ const AgendaDetail = () => {
             </Col>
           </Row>
 
-          {/* Agenda Lainnya Section */}
           <div className="mt-5 text-center">
             <h2 className="fw-bold mb-5" style={{ fontSize: '32px' }}>Agenda Lainnya</h2>
             <Row className="g-4">

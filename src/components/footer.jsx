@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom'; // 1. Import Link
+import { Link } from 'react-router-dom';
 import LogoWhite from '../assets/logo-white.png';
 
 const Footer = () => {
@@ -58,7 +58,6 @@ const Footer = () => {
       <div className="container">
         <div className="row">
           
-          {/* Kolom Kiri: Alamat & Contact */}
           <div className="col-lg-6 col-12 mb-5">
             <div className="row">
               <div className="col-12">
@@ -76,7 +75,6 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Kolom Tengah: Main Menu - Dihubungkan ke Route App.js */}
           <div className="col-lg-3 col-12 mb-4">
             <h6 style={styles.heading}>Main Menu</h6>
             <nav>
@@ -87,11 +85,9 @@ const Footer = () => {
             </nav>
           </div>
 
-          {/* Kolom Kanan: Program - Menggunakan slug prodi */}
           <div className="col-lg-3 col-12 mb-4">
             <h6 style={styles.heading}>Program</h6>
             <nav>
-              {/* Sesuai dengan rute /prodi/:slug di App.js */}
               <Link to="/prodi/pendidikan-agama-islam" style={styles.navLink}>Pendidikan Agama Islam</Link>
               <Link to="/prodi/pendidikan-bahasa-arab" style={styles.navLink}>Pendidikan Bahasa Arab</Link>
             </nav>
@@ -99,7 +95,6 @@ const Footer = () => {
 
         </div>
 
-        {/* Section Logo Besar Bawah */}
         <div className="row">
           <div className="col-12">
             <div style={styles.brandWrapper} className="justify-content-start">

@@ -72,7 +72,6 @@ const KalenderAkademik = () => {
           
           <a href="#unduh" className="link-unduh-primary mb-5 d-inline-block">Unduh</a>
 
-          {/* --- VIEW DESKTOP --- */}
           <section className="table-section d-none d-lg-block">
             <div className="table-responsive custom-table-wrapper">
               <Table hover className="align-middle mb-0">
@@ -104,7 +103,6 @@ const KalenderAkademik = () => {
             </div>
           </section>
 
-          {/* --- VIEW MOBILE --- */}
           <section className="accordion-section d-lg-none">
             <div className="accordion-header-custom p-3 text-center fw-bold">
               Kegiatan Akademik
@@ -117,13 +115,11 @@ const KalenderAkademik = () => {
                     <span className="text-dark small fw-medium">{item.kegiatan[0]}</span>
                   </Accordion.Header>
                   <Accordion.Body>
-                    {/* Baris Pelaksanaan */}
                     <div className="mobile-detail-row">
                       <span className="label">Pelaksanaan</span>
                       <span className="value text-end">{item.pelaksanaan}</span>
                     </div>
                     
-                    {/* Baris Keterangan */}
                     <div className="mobile-detail-row border-0">
                       <span className="label">Keterangan</span>
                       <span className="value text-end" style={{ whiteSpace: 'pre-line' }}>

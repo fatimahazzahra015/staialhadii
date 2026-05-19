@@ -73,8 +73,6 @@ const WartaDetail = () => {
                 dangerouslySetInnerHTML={{ __html: news.content }}
               />
 
-              {/* Ganti bagian <div className="d-flex gap-2 mt-5 mb-5"> lama dengan ini */}
-
                 <div className="d-flex gap-3 mt-5 mb-5 align-items-center">
                 {/* WhatsApp */}
                 <a 

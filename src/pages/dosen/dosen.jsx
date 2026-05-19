@@ -75,7 +75,6 @@ const Dosen = () => {
           </nav>
           <h1 className="page-title mb-4">Dosen dan Tenaga Pendidik</h1>
 
-          {/* Filter Wrapper Tanpa Tombol Samping */}
           <div className="filter-container mb-5">
             <div className="filter-scrollable">
               {categories.map((cat, i) => (
@@ -90,7 +89,6 @@ const Dosen = () => {
             </div>
           </div>
 
-          {/* Grid Dosen */}
           <Row className="g-4 mb-5">
             {currentItems.map((dosen) => (
               <Col key={dosen.id} lg={4} md={6} xs={12}>
@@ -107,7 +105,6 @@ const Dosen = () => {
             ))}
           </Row>
 
-          {/* Pagination */}
           {totalPages > 1 && (
             <div className="d-flex justify-content-center">
               <Pagination className="custom-pagination-stai">
@@ -131,14 +128,13 @@ const Dosen = () => {
       <Banner />
       <Footer />
 
-      {/* Modal Detail Dosen */}
       <Modal 
         show={showModal} 
         onHide={() => setShowModal(false)} 
         centered 
         size="lg" 
         className="dosen-modal"
-        backdrop="static" // Agar modal tidak tertutup tidak sengaja saat scroll
+        backdrop="static"
       >
         <Modal.Header closeButton className="border-0"></Modal.Header>
         <Modal.Body className="px-4 pb-5 pt-0">

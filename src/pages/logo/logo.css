@@ -1,7 +1,6 @@
-/* logo.css atau brand.css */
 .Logo-Page {
     font-family: 'Poppins', sans-serif;
-    margin-top: 60px; /* Menyesuaikan fixed header */
+    margin-top: 60px;
 }
 
 .logo-content {
@@ -20,7 +19,6 @@
     letter-spacing: -0.5px;
 }
 
-/* --- Filosofi Logo Selang-Seling --- */
 .philosophy-card {
     padding: 30px;
     border-radius: 4px;
@@ -29,12 +27,10 @@
     gap: 30px;
 }
 
-/* Background Abu-abu Muda (#F2F2F2) untuk index Genap (0, 2, 4...) */
 .philosophy-card:nth-child(even) {
     background-color: #F2F2F2;
 }
 
-/* Background Abu-abu Lebih Tua (#E6E6E6) untuk index Ganjil (1, 3, 5...) */
 .philosophy-card:nth-child(odd) {
     background-color: #E6E6E6;
 }
@@ -62,7 +58,6 @@
     margin-bottom: 0;
 }
 
-/* --- Palet Warna INTERAKTIF (Desktop) --- */
 .color-palette-section {
     margin: 60px 10px;
 }
@@ -70,26 +65,25 @@
 .color-grid {
     display: flex;
     width: 100%;
-    height: 250px; /* Tinggi ditambah untuk memuat deskripsi */
+    height: 250px; 
     border-radius: 8px;
     overflow: hidden;
     shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 
 .color-item {
-    flex: 1; /* Lebar default sama rata */
+    flex: 1; 
     padding: 30px;
     display: flex;
     flex-direction: column;
     color: white;
-    transition: flex 0.6s ease; /* Transisi halus saat melebar */
+    transition: flex 0.6s ease;
     cursor: pointer;
     position: relative;
 }
 
-/* Saat warna di-hover */
 .color-item:hover {
-    flex: 3; /* Melebar 3x lipat */
+    flex: 3;
 }
 
 .color-name {
@@ -98,17 +92,15 @@
     margin-bottom: 10px;
 }
 
-/* Deskripsi tersembunyi secara default */
 .color-desc {
     font-size: 13px;
     line-height: 1.5;
     opacity: 0;
     transform: translateY(10px);
-    transition: opacity 0.4s ease 0.2s, transform 0.4s ease 0.2s; /* Delay muncul */
-    max-width: 80%; /* Agar teks tidak terlalu panjang ke kanan saat melebar */
+    transition: opacity 0.4s ease 0.2s, transform 0.4s ease 0.2s;
+    max-width: 80%;
 }
 
-/* Deskripsi muncul saat parent-nya di-hover */
 .color-item:hover .color-desc {
     opacity: 1;
     transform: translateY(0);
@@ -120,7 +112,6 @@
     opacity: 0.8;
 }
 
-/* --- Download Section --- */
 .download-logo-card {
     padding: 30px;
     margin-bottom: 20px;
@@ -135,7 +126,6 @@
     max-width: 150px;
 }
 
-/* --- Responsive Mobile --- */
 @media (max-width: 991px) {
     .Logo-Page {
         margin-top: 20px;

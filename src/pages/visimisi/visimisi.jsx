@@ -13,7 +13,6 @@ const VisiMisi = () => {
     window.scrollTo(0, 0);
   }, []);
 
-  // Teks untuk dibagikan ke media sosial
   const shareTitle = "Visi dan Misi STAI Al-Hadi Bojonegoro";
 
   return (
@@ -53,7 +52,6 @@ const VisiMisi = () => {
                 />
               </div>
 
-              {/* Section Visi */}
               <section className="content-section mb-5">
                 <h2 className="section-subtitle">Visi</h2>
                 <ul className="custom-list">
@@ -67,7 +65,6 @@ const VisiMisi = () => {
                 </p>
               </section>
 
-              {/* Section Misi */}
               <section className="content-section mb-5">
                 <h2 className="section-subtitle">Misi</h2>
                 <ul className="custom-list">
@@ -82,7 +79,6 @@ const VisiMisi = () => {
               </section>
             </Col>
 
-            {/* Sidebar */}
             <Col lg={4}>
               <div className="sidebar-cta-box sticky-top" style={{ top: '100px', zIndex: '1' }}>
                 <h3 className="cta-title">Lorem ipsum dolor sit amet</h3>

@@ -1,4 +1,3 @@
-/* Layout Styling */
 .VisiMisi-Page {
     font-family: 'Poppins', sans-serif !important;
     margin-top: 60px;
@@ -9,7 +8,7 @@
 }
 
 .custom-container-1440 {
-    max-width: 1440px !important; /* Sesuai standar index.css Anda */
+    max-width: 1440px !important; 
     margin: 0 auto;
 }
 
@@ -47,7 +46,6 @@
     line-height: 1.6;
 }
 
-/* Sidebar CTA Box - Tetap Hitam Sesuai Gambar */
 .sidebar-cta-box {
     background-color: var(--black-color);
     color: var(--white-color);
@@ -87,7 +85,6 @@
     transform: scale(1.02);
 }
 
-/* Social Share Icons */
 .share-icon {
     width: 40px;
     height: 40px;

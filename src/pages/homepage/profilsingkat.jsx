@@ -1,13 +1,12 @@
 import React from 'react';
 import { Container, Row, Col, Button } from 'react-bootstrap';
-import { useNavigate } from 'react-router-dom'; // 1. Import useNavigate
+import { useNavigate } from 'react-router-dom'; 
 import Profil from '../../assets/profil.png'; 
 import './homepage.css';
 
 const ProfilSingkat = () => {
-  const navigate = useNavigate(); // 2. Inisialisasi fungsi navigate
+  const navigate = useNavigate(); 
 
-  // 3. Fungsi untuk berpindah halaman
   const handleNavigate = () => {
     navigate('/profil');
   };
@@ -17,7 +16,6 @@ const ProfilSingkat = () => {
       <Container className="profil-container">
         <Row className="align-items-center">
           
-          {/* JUDUL & DESKRIPSI DESKTOP */}
           <Col lg={6} xs={12} className="order-1">
             <h2 className="profil-title">
               Pendidikan Islam <br />
@@ -32,14 +30,12 @@ const ProfilSingkat = () => {
                 veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea 
                 komodo consequat.
               </p>
-              {/* 4. Tambahkan onClick */}
               <Button className="btn-profil-more" onClick={handleNavigate}>
                 Lihat Semua <span className="ms-2">&rarr;</span>
               </Button>
             </div>
           </Col>
 
-          {/* GAMBAR KOMPOSISI */}
           <Col lg={6} xs={12} className="order-2 mt-lg-0">
             <div className="img-combined-wrapper">
               <div className="img-main">
@@ -51,13 +47,11 @@ const ProfilSingkat = () => {
             </div>
           </Col>
 
-          {/* DESKRIPSI MOBILE */}
           <Col xs={12} className="order-3 d-lg-none mt-4">
             <div className="description-container text-start">
               <p className="profil-description">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
               </p>
-              {/* 5. Tambahkan onClick juga untuk button mobile */}
               <Button className="btn-profil-more w-100" onClick={handleNavigate}>
                 Lihat Semua <span className="ms-2">&rarr;</span>
               </Button>
