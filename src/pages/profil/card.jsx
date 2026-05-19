@@ -13,7 +13,7 @@ const FounderCard = () => {
       id: 2,
       quote: "Pendidikan adalah kunci perubahan. Kami berkomitmen menyediakan akses pendidikan tinggi Islam yang berkualitas dan terjangkau bagi seluruh lapisan masyarakat.",
       name: "Dr. H. Ahmad Fauzi, M.Pd.",
-      role: "Dewan Yayasan Al Hadi"
+      role: "Dewan Pembina Yayasan Al Hadi"
     },
     {
       id: 3,
