@@ -32,6 +32,7 @@ const Navbar = () => {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
   const [filteredResults, setFilteredResults] = useState([]);
+  const timeoutRef = useRef(null);
   
   const navigate = useNavigate();
   const searchInputRef = useRef(null);
@@ -239,8 +240,16 @@ const Navbar = () => {
                   <NavDropdown 
                     key={idx} 
                     show={openDropdown === idx} 
-                    onMouseEnter={() => setOpenDropdown(idx)} 
-                    onMouseLeave={() => setOpenDropdown(null)} 
+                    onMouseEnter={() => {
+                      if (timeoutRef.current) clearTimeout(timeoutRef.current); // Batalkan aksi tutup jika kursor masuk lagi
+                      setOpenDropdown(idx);
+                    }} 
+                    onMouseLeave={() => {
+                      // Berikan delay 150 milidetik sebelum menutup menu
+                      timeoutRef.current = setTimeout(() => {
+                        setOpenDropdown(null);
+                      }, 150);
+                    }}
                     title={
                       <div style={{fontSize: '13px', fontWeight: '600', color: openDropdown === idx ? primaryGreen : '#333', transition: '0.3s'}}>
                         {menu.title}

@@ -16,7 +16,7 @@ export const allAgendas = [
     time: "09:00 - 12:00",
     location: "Aula Utama STAI Al-Hadi",
     category: "Workshop",
-    img: AgendaImg,
+    img: "https://picsum.photos/id/201/400/250",
     desc: "Menakar peran mahasiswa di era ekonomi digital dengan strategi marketing yang sesuai syariah."
   },
   {
@@ -26,7 +26,7 @@ export const allAgendas = [
     time: "08:00 - Selesai",
     location: "Halaman Kampus",
     category: "Event",
-    img: AgendaImg,
+    img: "https://picsum.photos/id/202/400/250",
     desc: "Wadahi kreativitas santri dan mahasiswa dalam menyampaikan aspirasi melalui seni orasi."
   },
   {
@@ -36,7 +36,7 @@ export const allAgendas = [
     time: "09:00 - 12:00",
     location: "Aula Mini",
     category: "Workshop",
-    img: AgendaImg,
+    img: "https://picsum.photos/id/203/400/250",
     desc: "Program pengabdian masyarakat untuk meningkatkan kemampuan literasi Al-Qur'an."
   },
   {
@@ -46,7 +46,7 @@ export const allAgendas = [
     time: "10:00 - 13:00",
     location: "Auditorium",
     category: "Seminar",
-    img: AgendaImg,
+    img: "https://picsum.photos/id/204/400/250",
     desc: "Diskusi panel mengenai tantangan pemuda menghadapi teknologi masa depan."
   },
   {
@@ -56,7 +56,7 @@ export const allAgendas = [
     time: "08:00 - 16:00",
     location: "Online/Zoom",
     category: "Event",
-    img: AgendaImg,
+    img: "https://picsum.photos/id/206/400/250",
     desc: "Kompetisi ide kreatif mahasiswa tingkat nasional."
   },
   {
@@ -66,7 +66,7 @@ export const allAgendas = [
     time: "09:00 - 12:00",
     location: "Ruang Kelas A1",
     category: "Workshop",
-    img: AgendaImg,
+    img: "https://picsum.photos/id/209/400/250",
     desc: "Mengasah kemampuan bicara di depan umum bagi pengurus organisasi."
   },
   {
@@ -76,7 +76,7 @@ export const allAgendas = [
     time: "13:00 - 16:00",
     location: "Lab Komputer",
     category: "Workshop",
-    img: AgendaImg,
+    img: "https://picsum.photos/id/208/400/250",
     desc: "Slicing desain dan dasar-dasar pengalaman pengguna."
   }
 ];

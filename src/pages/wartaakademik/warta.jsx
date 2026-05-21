@@ -18,7 +18,7 @@ export const allNews = [
     year: "2026", 
     category: "Akademik", 
     desc: "Mahasiswa Informatika berhasil menciptakan solusi AI untuk efisiensi energi...", 
-    img: warta,
+    img: "https://picsum.photos/id/101/400/250",
     content: `
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
       <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
@@ -32,13 +32,13 @@ export const allNews = [
     year: "2026", 
     category: "Prestasi", 
     desc: "Tim STAI Al Hadi berhasil menyabet gelar juara pertama dalam kompetisi...", 
-    img: warta,
+    img: "https://picsum.photos/id/102/400/250",
     content: "<p>Kemenangan ini diraih setelah melalui proses seleksi ketat selama 3 bulan...</p><p>Prestasi ini membuktikan bahwa dedikasi dan latihan keras membuahkan hasil yang maksimal bagi seluruh tim dan institusi.</p>"
   },
-  { id: 3, title: "Workshop UI/UX Design Bersama Praktisi", date: "21 Maret 2026", year: "2026", category: "Akademik", desc: "Meningkatkan skill desain antarmuka mahasiswa melalui workshop intensif...", img: warta, content: "<p>Isi lengkap workshop...</p>" },
-  { id: 4, title: "Penerimaan Mahasiswa Baru Gelombang 2", date: "20 Maret 2026", year: "2026", category: "Lainnya", desc: "Pendaftaran telah dibuka untuk calon mahasiswa berbakat...", img: warta, content: "<p>Informasi pendaftaran...</p>" },
-  { id: 5, title: "Seminar Nasional Teknologi Informasi", date: "19 Maret 2026", year: "2026", category: "Akademik", desc: "Menghadirkan pembicara dari perusahaan teknologi ternama...", img: warta, content: "<p>Isi seminar...</p>" },
-  { id: 6, title: "Lulusan Terbaik Tahun Akademik 2025", date: "15 Desember 2025", year: "2025", category: "Prestasi", desc: "Penghargaan diberikan kepada lulusan dengan IPK tertinggi...", img: warta, content: "<p>Detail kelulusan...</p>" },
+  { id: 3, title: "Workshop UI/UX Design Bersama Praktisi", date: "21 Maret 2026", year: "2026", category: "Akademik", desc: "Meningkatkan skill desain antarmuka mahasiswa melalui workshop intensif...", img: "https://picsum.photos/id/104/400/250", content: "<p>Isi lengkap workshop...</p>" },
+  { id: 4, title: "Penerimaan Mahasiswa Baru Gelombang 2", date: "20 Maret 2026", year: "2026", category: "Lainnya", desc: "Pendaftaran telah dibuka untuk calon mahasiswa berbakat...", img: "https://picsum.photos/id/106/400/250", content: "<p>Informasi pendaftaran...</p>" },
+  { id: 5, title: "Seminar Nasional Teknologi Informasi", date: "19 Maret 2026", year: "2026", category: "Akademik", desc: "Menghadirkan pembicara dari perusahaan teknologi ternama...", img: "https://picsum.photos/id/107/400/250", content: "<p>Isi seminar...</p>" },
+  { id: 6, title: "Lulusan Terbaik Tahun Akademik 2025", date: "15 Desember 2025", year: "2025", category: "Prestasi", desc: "Penghargaan diberikan kepada lulusan dengan IPK tertinggi...", img: "https://picsum.photos/id/109/400/250", content: "<p>Detail kelulusan...</p>" },
 ];
 
 const Warta = () => {

@@ -3,7 +3,8 @@ import { Container, Row, Col, Button } from 'react-bootstrap';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination, EffectFade } from 'swiper/modules';
 import Profil from '../../assets/profil.png'; 
-import Warta from '../../assets/warta.png'; 
+import Hero2 from '../../assets/hero2.avif'; 
+import Hero3 from '../../assets/hero3.webp';
 
 import 'swiper/css';
 import 'swiper/css/pagination';
@@ -13,8 +14,8 @@ import './homepage.css';
 const Hero = () => {
   const slides = [
     { id: "01", title: "Unggul dalam Ilmu, \n Kokoh dalam Akhlak", desc: "Pendidikan Islam adaptif dan unggul Berakar pada tradisi, melangkah menuju masa depan.", img: Profil },
-    { id: "02", title: "Mencetak Generasi \n Qur'ani yang Berilmu", desc: "Kurikulum terpadu yang memadukan keilmuan kontemporer dengan nilai-nilai luhur pesantren.", img: Warta },
-    { id: "03", title: "Lingkungan Belajar \n Inspiratif dan Menyenangkan", desc: "Fasilitas lengkap dan tenaga pendidik profesional untuk mendukung potensi maksimal mahasiswa.", img: Profil }
+    { id: "02", title: "Mencetak Generasi \n Qur'ani yang Berilmu", desc: "Kurikulum terpadu yang memadukan keilmuan kontemporer dengan nilai-nilai luhur pesantren.", img: Hero2 },
+    { id: "03", title: "Lingkungan Belajar \n Inspiratif dan Menyenangkan", desc: "Fasilitas lengkap dan tenaga pendidik profesional untuk mendukung potensi maksimal mahasiswa.", img: Hero3 }
   ];
 
   return (

@@ -1,7 +1,8 @@
 import React from 'react';
 import { Container, Row, Col, Button } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom'; 
-import Profil from '../../assets/profil.png'; 
+import Profil2 from '../../assets/profil2.png'; 
+import Profil3 from '../../assets/profil3.avif'; 
 import './homepage.css';
 
 const ProfilSingkat = () => {
@@ -39,10 +40,10 @@ const ProfilSingkat = () => {
           <Col lg={6} xs={12} className="order-2 mt-lg-0">
             <div className="img-combined-wrapper">
               <div className="img-main">
-                <img src={Profil} alt="Campus Building" className="img-fluid" />
+                <img src={Profil2} alt="Campus Building" className="img-fluid" />
               </div>
               <div className="img-overlay-top">
-                <img src={Profil} alt="Activity" className="img-fluid" />
+                <img src={Profil3} alt="Activity" className="img-fluid" />
               </div>
             </div>
           </Col>

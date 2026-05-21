@@ -1,6 +1,6 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Profile from "../assets/profil.png"
+import Profile from "../assets/banner.avif"
 
 const Banner = () => {
   const bannerSectionStyle = {
@@ -66,7 +66,7 @@ const Banner = () => {
           <div className="row justify-content-center g-0">
             <div className="col-lg-10">
               <h1 className="mb-4" style={bannerTitleStyle}>
-                Lorem ipsum dolor sit amet
+                Ayo daftar di STIT Al-Hadi
               </h1>
               
               <p className="mb-5 mx-auto" style={bannerSubtitleStyle}>
