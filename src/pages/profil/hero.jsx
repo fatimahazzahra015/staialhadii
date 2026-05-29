@@ -19,7 +19,7 @@ const ProfilHero = () => {
         <div className="mb-4">
           <h1 className="profil-title">Profil Kami</h1>
           <p className="profil-description">
-            Program Studi S1 Pendidikan Agama Islam dirancang untuk mencetak tenaga pendidik yang kompeten dalam bidang keislaman, pedagogik, dan pengembangan karakter. Mahasiswa dibekali dengan pemahaman mendalam tentang ilmu-ilmu keislaman serta keterampilan mengajar yang relevan dengan kebutuhan pendidikan masa kini.
+            STIT Al Hadi Bojonegoro hadir sebagai perguruan tinggi Islam berbasis pesantren yang berkomitmen mencetak generasi Qur’ani berilmu dan berakhlak. Berakar kuat pada tradisi keilmuan Islam klasik (turats) serta nilai Ahlussunnah wal Jama’ah, STAI Al Hadi mengintegrasikan sistem pendidikan tinggi modern untuk menjawab kebutuhan zaman.  
           </p>
         </div>
 
@@ -42,7 +42,7 @@ const ProfilHero = () => {
 
           <div className="profil-tagline-container order-tagline">
             <h2 className="profil-tagline-text">
-              Berbasis pesantren, STAI Al Hadi membentuk lulusan unggul dalam ilmu, karakter, dan pengabdian.
+              Berbasis pesantren, STIT Al Hadi membentuk lulusan unggul dalam ilmu, karakter, dan pengabdian.
             </h2>
           </div>
 

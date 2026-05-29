@@ -50,7 +50,7 @@ const Header = () => {
           
           {/* Sisi Kiri */}
           <div style={{ letterSpacing: '0.5px', fontWeight: '400' }}>
-            Welcome to STAI Al-Hadi
+            Welcome to STIT Al-Hadi
           </div>
 
           {/* Sisi Kanan */}
@@ -62,7 +62,7 @@ const Header = () => {
             >
               <Envelope style={{ marginRight: '8px', fontSize: '14px' }} />
               <span style={{ fontWeight: '300', opacity: '0.9' }}>
-                campus@staialhadi.ac.id
+                campus@stitalhadi.ac.id
               </span>
             </div>
           </div>

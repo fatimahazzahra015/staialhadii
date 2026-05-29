@@ -10,9 +10,18 @@ const ProgramStudi = () => {
     setOpenIndex(openIndex === index ? null : index);
   };
 
+  // 1. Menambahkan properti 'desc' yang berbeda untuk setiap program studi
   const programs = [
-    { title: "S1 Pendidikan Agama Islam", img: Profil },
-    { title: "S1 Pendidikan Bahasa Arab", img: Profil },
+    { 
+      title: "S1 Pendidikan Agama Islam", 
+      img: Profil,
+      desc: "Program Studi S1 Pendidikan Agama Islam menyiapkan pendidik profesional dengan kompetensi keislaman, pedagogik, dan pengembangan karakter sesuai kebutuhan pendidikan masa kini."
+    },
+    { 
+      title: "S1 Pendidikan Bahasa Arab", 
+      img: Profil,
+      desc: "Program Studi S1 Pendidikan Bahasa Arab menyiapkan pendidik profesional dengan penguasaan bahasa Arab, metodologi pengajaran, serta wawasan budaya dan keislaman untuk menjawab kebutuhan pendidikan global."
+    },
   ];
 
   return (
@@ -21,7 +30,7 @@ const ProgramStudi = () => {
         <div className="text-center mb-5 px-3">
           <h2 className="section-title-main">Program Studi</h2>
           <p className="section-subtitle" style={{ color: '#333', fontSize: '18px', fontWeight: '400' }}>
-            Pilih program studi yang sesuai dengan minat dan bakat Anda untuk membangun masa depan yang cerah.
+            Mulai langkah awal perjuanganmu. Pilih program studi unggulan yang memadukan kedalaman ilmu pesantren dengan kesiapan karier di era digital.
           </p>
         </div>
 
@@ -51,8 +60,9 @@ const ProgramStudi = () => {
                       <div className="opened-content container-fluid d-flex flex-column flex-md-row justify-content-between align-items-md-center px-4 px-md-5">
                         <div className="text-white mb-4 mb-md-0 text-start">
                           <h3 className="program-title-opened">{item.title}</h3>
+                          {/* 2. Mengubah teks Lorem Ipsum menjadi item.desc */}
                           <p className="program-desc-opened d-none d-md-block">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            {item.desc}
                           </p>
                         </div>
                         <button className="btn-daftar-studi">

@@ -70,7 +70,7 @@ const Banner = () => {
               </h1>
               
               <p className="mb-5 mx-auto" style={bannerSubtitleStyle}>
-                "STAI Al Hadi lahir dari semangat pesantren untuk mencetak generasi Qur'ani yang berilmu, 
+                "STIT Al Hadi lahir dari semangat pesantren untuk mencetak generasi Qur'ani yang berilmu, 
                 berakhlak, dan memberi manfaat luas bagi umat dan bangsa."
               </p>
 

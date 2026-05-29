@@ -70,7 +70,7 @@ const Footer = () => {
               <div className="col-12">
                 <h6 style={styles.heading}>Contact</h6>
                 <p style={{...styles.text, marginBottom: '0.2rem'}}>08888-8888-8888</p>
-                <p style={{...styles.text, marginBottom: '0.2rem'}}>campus@staialhadi.ac.id</p>
+                <p style={{...styles.text, marginBottom: '0.2rem'}}>campus@stitalhadi.ac.id</p>
               </div>
             </div>
           </div>

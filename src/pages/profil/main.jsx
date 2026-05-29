@@ -15,10 +15,7 @@ const ProfilMain = () => {
             </h2>
             <div className="profil-main-text">
               <p>
-                STAI Al Hadi lahir dari semangat pengabdian para pendiri untuk membangun pusat kaderisasi pendidik dan generasi muslim unggul. Berlandaskan tradisi pesantren yang kokoh dan komitmen terhadap mutu pendidikan tinggi, STAI Al Hadi melangkah dengan visi jangka panjang menjadi institusi yang adaptif, profesional, dan relevan bagi masyarakat.
-              </p>
-              <p>
-                STAI Al Hadi lahir dari semangat pengabdian para pendiri untuk membangun pusat kaderisasi pendidik dan generasi muslim unggul. Berlandaskan tradisi pesantren yang kokoh dan komitmen terhadap mutu pendidikan tinggi, STAI Al Hadi melangkah dengan visi jangka panjang menjadi institusi yang adaptif, profesional, dan relevan bagi masyarakat.
+               STIT AI Hadi Bojonegoro adalah lembaga pendidikan tinggi berbasis kultur pesantren dengan kekhasan pada penguatan khazanah turats (kitab-kitab klasik) yang terintegrasi dengan sistem pendidikan modern. Sebagai mitra strategis pemerintah, lembaga ini berkomitmen memajukan mutu pendidikan tinggi Islam, memperluas akses masyarakat, serta melahirkan pendidik dan dai-educator yang berkarakter Qur'ani, cakap digital, dan berkhidmat untuk kemaslahatan.
               </p>
             </div>
           </Col>
@@ -27,7 +24,7 @@ const ProfilMain = () => {
             <div className="img-composition-wrapper">
               <img 
                 src={MainImage} 
-                alt="Suasana Kelas STAI Al Hadi" 
+                alt="Suasana Kelas STIT Al Hadi" 
                 className="img-main"
               />
               <img 

@@ -5,21 +5,21 @@ const FounderCard = () => {
   const founders = [
     {
       id: 1,
-      quote: "STAI Al Hadi lahir dari semangat pesantren untuk mencetak generasi Qur'ani yang berilmu, berakhlak, dan memberi manfaat luas bagi umat dan bangsa.",
+      quote: "STIT Al Hadi lahir dari semangat pesantren untuk mencetak generasi Qur'ani yang berilmu, berakhlak, dan memberi manfaat luas bagi umat dan bangsa.",
       name: "K.H. M. Ghufron, MM.",
-      role: "Kepala Yayasan Ponpes Al Hadi & Pendiri STAI Al Hadi"
+      role: "Kepala Yayasan Ponpes Al Hadi & Pendiri STIT Al Hadi"
     },
     {
       id: 2,
-      quote: "Pendidikan adalah kunci perubahan. Kami berkomitmen menyediakan akses pendidikan tinggi Islam yang berkualitas dan terjangkau bagi seluruh lapisan masyarakat.",
+      quote: "Kami mengintegrasikan turats dan keilmuan modern agar mahasiswa siap menjadi pendidik dan pemimpin yang relevan dengan tantangan zaman.",
       name: "Dr. H. Ahmad Fauzi, M.Pd.",
-      role: "Dewan Pembina Yayasan Al Hadi"
+      role: "Wakil Ketua Bidang Akademik STIT Al Hadi"
     },
     {
       id: 3,
-      quote: "Menghadapi tantangan global, lulusan kami dibekali dengan integritas moral dan keahlian profesional untuk menjadi pemimpin masa depan.",
+      quote: "Pendidikan adalah kunci perubahan. Kami berkomitmen menyediakan akses pendidikan tinggi Islam yang berkualitas dan terjangkau bagi seluruh lapisan masyarakat.",
       name: "Hj. Siti Aminah, M.Ag.",
-      role: "Rektor STAI Al Hadi"
+      role: "Kepala Senat Akademik STIT Al Hadi"
     }
   ];
 

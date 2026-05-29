@@ -142,7 +142,7 @@ const WartaDetail = () => {
                 </div>
 
                 <div className="sidebar-cta-box">
-                    <h3 className="cta-title">Lorem ipsum dolor sit amet</h3>
+                    <h3 className="cta-title">Kuliah Berkah, Masa Depan Cerah!</h3>
                     <p className="cta-desc">
                     “STAI Al Hadi hadir dari semangat pesantren untuk mencetak generasi Qur'ani yang berilmu, berakhlak, dan memberi manfaat luas bagi umat dan bangsa.”
                     </p>

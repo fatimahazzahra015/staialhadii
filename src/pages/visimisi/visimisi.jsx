@@ -13,7 +13,7 @@ const VisiMisi = () => {
     window.scrollTo(0, 0);
   }, []);
 
-  const shareTitle = "Visi dan Misi STAI Al-Hadi Bojonegoro";
+  const shareTitle = "Visi dan Misi STIT Al-Hadi Bojonegoro";
 
   return (
     <div className="VisiMisi-Page">
@@ -40,13 +40,13 @@ const VisiMisi = () => {
               <h1 className="page-main-title mb-4">Visi dan Misi</h1>
               
               <p className="intro-text mb-4">
-                Program Studi S1 Pendidikan Agama Islam dirancang untuk mencetak tenaga pendidik yang kompeten dalam bidang keagamaan, pedagogik, dan pengembangan karakter. Mahasiswa dibekali dengan pemahaman mendalam tentang ilmu-ilmu keislaman serta keterampilan mengajar yang relevan dengan kebutuhan pendidikan masa kini.
+                Al Hadi Bojonegoro hadir sebagai perguruan tinggi Islam berbasis pesantren yang berkomitmen mencetak generasi Qur’ani berilmu dan berakhlak. Berakar kuat pada tradisi keilmuan Islam klasik (turats) serta nilai Ahlussunnah wal Jama’ah, STIT Al Hadi mengintegrasikan sistem pendidikan tinggi modern untuk menjawab kebutuhan zaman.  
               </p>
 
               <div className="main-img-wrapper mb-5">
                 <img 
                     src={VisiMisiImg} 
-                    alt="Profil STAI Al Hadi" 
+                    alt="Profil STIT Al Hadi" 
                     className="img-fluid rounded-1 w-100 shadow-sm" 
                     style={{ objectFit: 'cover', maxHeight: '450px' }}
                 />
@@ -61,7 +61,7 @@ const VisiMisi = () => {
                   <li>Penerapan teknologi dalam metodologi pembelajaran agama.</li>
                 </ul>
                 <p className="noted-text">
-                  Visi ini menjadi landasan utama bagi STAI Al Hadi dalam mencetak kader ulama dan intelektual muslim.
+                  Visi ini menjadi landasan utama bagi STIT Al Hadi dalam mencetak kader ulama dan intelektual muslim.
                 </p>
               </section>
 
@@ -81,9 +81,9 @@ const VisiMisi = () => {
 
             <Col lg={4}>
               <div className="sidebar-cta-box sticky-top" style={{ top: '100px', zIndex: '1' }}>
-                <h3 className="cta-title">Lorem ipsum dolor sit amet</h3>
+                <h3 className="cta-title">Kuliah Berkah, Masa Depan Cerah!</h3>
                 <p className="cta-desc">
-                  “STAI Al Hadi hadir dari semangat pesantren untuk mencetak generasi Qur'ani yang berilmu, berakhlak, dan memberi manfaat luas bagi umat dan bangsa.”
+                  “STIT Al Hadi hadir dari semangat pesantren untuk mencetak generasi Qur'ani yang berilmu, berakhlak, dan memberi manfaat luas bagi umat dan bangsa.”
                 </p>
                 <button className="cta-btn w-100">Daftar Sekarang</button>
               </div>

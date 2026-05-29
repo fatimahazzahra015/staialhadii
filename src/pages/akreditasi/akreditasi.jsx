@@ -19,8 +19,8 @@ const Akreditasi = () => {
       prodi: "Pendidikan Agama Islam",
       strata: "S1",
       peringkat: "A",
-      nomorSk: "XXXXXXXXXXXXXX",
-      masaBerlaku: "08/08/2030",
+      nomorSk: "56433821987562",
+      masaBerlaku: "08/04/2026",
       linkUnduh: "#"
     },
     {
@@ -28,8 +28,8 @@ const Akreditasi = () => {
       prodi: "Pendidikan Bahasa Arab",
       strata: "S1",
       peringkat: "A",
-      nomorSk: "XXXXXXXXXXXXXX",
-      masaBerlaku: "08/08/2030",
+      nomorSk: "67585933922108",
+      masaBerlaku: "08/05/2026",
       linkUnduh: "#"
     }
   ];
@@ -70,9 +70,9 @@ const Akreditasi = () => {
             <Col lg={5}>
               <div className="akreditasi-detail">
                 <h2 className="detail-title">Akreditasi Baik Sekali</h2>
-                <p className="sk-number text-muted mb-3">NO SK: XXXXXXXXXXXXXX</p>
+                <p className="sk-number text-muted mb-3">NO SK: 4850284056428</p>
                 <p className="detail-desc text-secondary">
-                  Sertifikat akreditasi merupakan bukti formal kualitas mutu pendidikan di lingkungan kampus STAI Al-Hadi Bojonegoro sesuai dengan standar nasional.
+                  Sertifikat akreditasi merupakan bukti formal kualitas mutu pendidikan di lingkungan kampus STIT Al-Hadi Bojonegoro sesuai dengan standar nasional.
                 </p>
                 <a href="#unduh" className="btn-unduh-text text-decoration-none">Unduh</a>
               </div>

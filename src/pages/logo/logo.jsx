@@ -17,12 +17,12 @@ const Logo = () => {
         const filosofiData = [
         {
             title: "Bentuk Kubah Masjid",
-            desc: "Bentuk lengkungan hijau tua yang menyerupai kubah masjid atau gerbang islami merupakan representasi visual yang paling dominan. Kubah Masjid: Melambangkan identitas keisiaman yang kuat dan menjadi wadah bagi pengembangan ilmu-ilmu agama. Ini menunjukkan STAI Al-Hadi Bojonegoro adalah lembaga pendidikan Islam yang berlandaskan ajaran Al-Qur'an dan Sunnah.",
+            desc: "Bentuk lengkungan hijau tua yang menyerupai kubah masjid atau gerbang islami merupakan representasi visual yang paling dominan. Kubah Masjid: Melambangkan identitas keisiaman yang kuat dan menjadi wadah bagi pengembangan ilmu-ilmu agama. Ini menunjukkan STIT Al-Hadi Bojonegoro adalah lembaga pendidikan Islam yang berlandaskan ajaran Al-Qur'an dan Sunnah.",
             icon: LogoKubah 
         },
         {
             title: "Kaligrafi Arab 'Al-Hadi'",
-            desc: "Di bagian tengah logo, terdapat kaligrafi Arab yang membentuk tulisan \"Al-Hadi\". Dalam Asmaul Husna, \"Al-Hadi\" berarti Yang Maha Pemberi Petunjuk. Ini merepresentasikan STAI Al-Hadi Bojonegoro sebagai institusi yang memberikan petunjuk, bimbingan, dan arah yang benar bagi mahasiswanya, baik dalam aspek keilmuan maupun moral. Dengan menggunakan gaya kaligrafi yang modern namun tetap mudah dikenali menunjukkan penghargaan terhadap tradisi islam sekaligus keterbukaan terhadap inovasi, Ini mencerminkan bahwa STAI Al-Hadi Bojonegoro mengajarkan ilmu agama dengan metode yang relevan di era kontemporer.",
+            desc: "Di bagian tengah logo, terdapat kaligrafi Arab yang membentuk tulisan \"Al-Hadi\". Dalam Asmaul Husna, \"Al-Hadi\" berarti Yang Maha Pemberi Petunjuk. Ini merepresentasikan STIT Al-Hadi Bojonegoro sebagai institusi yang memberikan petunjuk, bimbingan, dan arah yang benar bagi mahasiswanya, baik dalam aspek keilmuan maupun moral. Dengan menggunakan gaya kaligrafi yang modern namun tetap mudah dikenali menunjukkan penghargaan terhadap tradisi islam sekaligus keterbukaan terhadap inovasi, Ini mencerminkan bahwa STIT Al-Hadi Bojonegoro mengajarkan ilmu agama dengan metode yang relevan di era kontemporer.",
             icon: LogoKaligrafi
         },
         {
@@ -32,11 +32,11 @@ const Logo = () => {
         },
         {
             title: "Bintang Emas",
-            desc: "Tepat di atas ikon Al-Qur'an terbuka, terdapat sebuah bintang berwarna emas. Simbol Prestasi dan Harapan: Bintang sering diartikan sebagai simbol prestasi, tujuan, dan cita-cita yang tinggi. Ini merefleksikan harapan STAI Al-Hadi Bojonegoro untuk melahirkan lulusan yang berprestasi, mampu bersaing, dan menjadi pemimpin yang cemerlang.",
+            desc: "Tepat di atas ikon Al-Qur'an terbuka, terdapat sebuah bintang berwarna emas. Simbol Prestasi dan Harapan: Bintang sering diartikan sebagai simbol prestasi, tujuan, dan cita-cita yang tinggi. Ini merefleksikan harapan STIT Al-Hadi Bojonegoro untuk melahirkan lulusan yang berprestasi, mampu bersaing, dan menjadi pemimpin yang cemerlang.",
             icon: LogoBintang
         },
         {
-            title: "Tipografi 'STAI AL-HADI BOJONEGORO'",
+            title: "Tipografi 'STIT AL-HADI BOJONEGORO'",
             desc: "Tipografi yang digunakan dalam logo mencerminkan kekayaan budaya dan tradisi Islam. Huruf-huruf yang dirancang dengan hati-hati menunjukkan komitmen terhadap kualitas dan estetika dalam menyampaikan pesan.",
             icon: LogoTipografi
         }
@@ -108,7 +108,7 @@ const Logo = () => {
                     <div className="philosophy-section mt-5">
                         <h3 className="text-center fw-bold mb-4">Filosofi Logo</h3>
                         <p className="text-center text-muted mb-5 px-md-5">
-                            Logo STAI Al-Hadi mencerminkan nilai-nilai luhur Islam, ilmu pengetahuan, dan pengabdian masyarakat yang terintegrasi dalam satu kesatuan visi dan misi.
+                            Logo STIT Al-Hadi mencerminkan nilai-nilai luhur Islam, ilmu pengetahuan, dan pengabdian masyarakat yang terintegrasi dalam satu kesatuan visi dan misi.
                         </p>
 
                         {filosofiData.map((item, index) => (

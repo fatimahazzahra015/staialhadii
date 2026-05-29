@@ -67,14 +67,7 @@ const AgendaDetail = () => {
 
             <Col lg={8} className="order-3 order-lg-2">
               <div className="agenda-content">
-                <p style={{ textAlign: 'justify', fontSize: '15px', color: '#444', lineHeight: '1.8' }}>{item.desc}</p>
-                <p style={{ textAlign: 'justify', fontSize: '15px', color: '#444', lineHeight: '1.8' }}>
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit accusamus quas soluta nesciunt temporibus impedit non tenetur, adipisci voluptatibus rerum? Aperiam qui nihil hic excepturi atque facere autem minima! Praesentium?
-                </p>
-                <p style={{ textAlign: 'justify', fontSize: '15px', color: '#444', lineHeight: '1.8' }}>
-                  Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, explicabo.
-                </p>
-
+                {item.desc.map((paragraf, index) => <p key={index} style={{ textAlign: 'justify', fontSize: '15px', color: '#444', lineHeight: '1.8', marginBottom: '1rem' }}>{paragraf}</p>)}
                 <div className="d-flex gap-3 mt-5 mb-5 align-items-center">
                   <a href={`https://wa.me/?text=${encodeURIComponent(item.title + " " + currentUrl)}`} target="_blank" rel="noreferrer" className="d-flex align-items-center justify-content-center text-white text-decoration-none shadow-sm hov-scale" style={{ width: '45px', height: '45px', backgroundColor: '#58d83d', borderRadius: '4px' }}>
                     <i className="bi bi-whatsapp fs-4"></i>

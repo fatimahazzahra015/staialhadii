@@ -13,10 +13,25 @@ import './homepage.css';
 
 const Hero = () => {
   const slides = [
-    { id: "01", title: "Unggul dalam Ilmu, \n Kokoh dalam Akhlak", desc: "Pendidikan Islam adaptif dan unggul Berakar pada tradisi, melangkah menuju masa depan.", img: Profil },
-    { id: "02", title: "Mencetak Generasi \n Qur'ani yang Berilmu", desc: "Kurikulum terpadu yang memadukan keilmuan kontemporer dengan nilai-nilai luhur pesantren.", img: Hero2 },
-    { id: "03", title: "Lingkungan Belajar \n Inspiratif dan Menyenangkan", desc: "Fasilitas lengkap dan tenaga pendidik profesional untuk mendukung potensi maksimal mahasiswa.", img: Hero3 }
-  ];
+    {
+    id: "01",
+    title: "Unggul dalam Ilmu,\nKokoh dalam Akhlak",
+    desc: "Pendidikan Islam adaptif dan unggul Berakar pada tradisi, melangkah menuju masa depan.",
+    img: Profil // Tetap menggunakan import variable gambar Anda
+  },
+  {
+    id: "02",
+    title: "Mencetak Dai-Educator\nBerkarakter Qur'ani",
+    desc: "Kurikulum adaptif untuk melahirkan guru dan pendakwah masa depan yang cerdas, berakhlak mulia, serta tanggap teknologi.",
+    img: Hero2
+  },
+  {
+    id: "03",
+    title: "Kuliah Penuh Berkah,\nBiaya Sangat Terjangkau",
+    desc: "Lingkungan belajar pesantren yang kondusif dengan dukungan beasiswa luas untuk kesuksesan Anda. Daftar sekarang juga!",
+    img: Hero3
+  }
+];
 
   return (
     <div className="hero-wrapper animate__animated animate__fadeIn">

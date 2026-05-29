@@ -26,10 +26,7 @@ const ProfilSingkat = () => {
             
             <div className="description-container d-none d-lg-block">
               <p className="profil-description">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod 
-                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim 
-                veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea 
-                komodo consequat.
+                STIT AI Hadi Bojonegoro adalah lembaga pendidikan tinggi berbasis kultur pesantren dengan kekhasan pada penguatan khazanah turats (kitab-kitab klasik) yang terintegrasi dengan sistem pendidikan modern. Sebagai mitra strategis pemerintah, lembaga ini berkomitmen memajukan mutu pendidikan tinggi Islam, memperluas akses masyarakat, serta melahirkan pendidik dan dai-educator yang berkarakter Qur'ani, cakap digital, dan berkhidmat untuk kemaslahatan.
               </p>
               <Button className="btn-profil-more" onClick={handleNavigate}>
                 Lihat Semua <span className="ms-2">&rarr;</span>
@@ -47,18 +44,6 @@ const ProfilSingkat = () => {
               </div>
             </div>
           </Col>
-
-          <Col xs={12} className="order-3 d-lg-none mt-4">
-            <div className="description-container text-start">
-              <p className="profil-description">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              </p>
-              <Button className="btn-profil-more w-100" onClick={handleNavigate}>
-                Lihat Semua <span className="ms-2">&rarr;</span>
-              </Button>
-            </div>
-          </Col>
-
         </Row>
       </Container>
     </section>

@@ -18,27 +18,27 @@ const Prodi = () => {
   const contentData = {
     'pendidikan-agama-islam': {
       title: "S1 Pendidikan Agama Islam",
-      intro: "Program Studi S1 Pendidikan Agama Islam dirancang untuk mencetak tenaga pendidik yang kompeten dalam bidang keagamaan, pedagogik, dan pengembangan karakter.",
-      overview: "Mempersiapkan mahasiswa menjadi pendidik profesional, inovatif, dan berintegritas dalam bidang pendidikan Islam dengan penguasaan Al-Qur'an, Hadis, Fiqih, dan Akidah Akhlak.",
+      intro: "Program Studi S1 Pendidikan Agama Islam dirancang untuk mencetak Dai-Educator dan tenaga pendidik berkarakter Qur'ani yang kompeten dalam mengintegrasikan khazanah turats (kitab klasik) dengan sistem pendidikan modern.",
+      overview: "Mempersiapkan mahasiswa menjadi pendidik PAI profesional, inovatif, dan berintegritas yang tidak hanya menguasai metodologi pembelajaran digital, tetapi juga memiliki kedalaman ilmu syariat berbasis kultur pesantren untuk kemaslahatan umat.",
       practical: [
-        "Microteaching dan Praktik Mengajar di sekolah/madrasah",
-        "Program Pengenalan Lapangan Persekolahan (PLP)",
-        "Praktikum Pengembangan Media Pembelajaran PAI",
-        "Penelitian Lapangan Pendidikan Islam"
+        "Microteaching dan Praktik Mengajar berbasis Media Pembelajaran Digital",
+        "Program Pengenalan Lapangan Persekolahan (PLP) di Sekolah/Madrasah & Pesantren",
+        "Praktikum Metode Mudarasah/Kajian Kitab Turats Tematik",
+        "Penelitian Lapangan dan Pengabdian Masyarakat Keagamaan (Dakwah Kontemporer)"
       ],
-      careers: ["Guru PAI", "Penyuluh Agama", "Peneliti Pendidikan Islam", "Konsultan Keagamaan"]
+      careers: ["Guru PAI (Sekolah/Madrasah/Pesantren)", "Dai-Educator / Penyuluh Agama Islam", "Developer Konten Edukasi Islam Digital", "Peneliti & Konsultan Pendidikan Islam"]
     },
     'pendidikan-bahasa-arab': {
       title: "S1 Pendidikan Bahasa Arab",
-      intro: "Program Studi S1 Pendidikan Bahasa Arab fokus pada penguasaan bahasa Arab secara lisan dan tulisan serta metodologi pengajarannya bagi lembaga pendidikan.",
-      overview: "Menghasilkan lulusan yang ahli dalam bahasa Arab (Lughawiyyat) dan memiliki kemampuan mengajar menggunakan teknologi modern serta komunikasi internasional.",
+      intro: "Program Studi S1 Pendidikan Bahasa Arab fokus pada penguasaan bahasa Arab integratif sebagai kunci mendalami khazanah turats sekaligus instrumen komunikasi internasional di era modern.",
+      overview: "Menghasilkan lulusan yang ahli dalam bahasa Arab (Lughawiyyat), cakap digital, dan terampil mengajarkannya menggunakan metodologi modern tanpa kehilangan akar tradisi literasi kitab klasik pesantren.",
       practical: [
-        "Laboratorium Bahasa Arab dan Muhadasah",
-        "Praktik Mengajar Bahasa Arab di Madrasah",
-        "Program Intensif I'dad Lughawi",
-        "Penerjemahan Teks Bahasa Arab"
+        "Laboratorium Bahasa dan Praktikum Muhadasah-Digital",
+        "Praktik Mengajar Bahasa Arab (PPL) Terintegrasi",
+        "Program Intensif I'dad Lughawi & Qira'atul Kutub (Membaca Kitab Kuning)",
+        "Praktikum Penerjemahan Teks Turats dan Dokumen Kontemporer"
       ],
-      careers: ["Guru Bahasa Arab", "Penerjemah/Interpreter", "Tour Guide Haji & Umrah", "Staff Kedutaan"]
+      careers: ["Guru Bahasa Arab (Sekolah/Madrasah/Pesantren)", "Penerjemah Kitab Turats & Teks Kontemporer", "Dai/Edukator Bahasa Arab Digital", "Staff Profesional Lembaga Islam & Tour Guide Haji/Umrah"]
     }
   };
 

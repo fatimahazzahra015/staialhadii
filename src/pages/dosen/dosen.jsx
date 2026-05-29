@@ -107,7 +107,7 @@ const Dosen = () => {
 
           {totalPages > 1 && (
             <div className="d-flex justify-content-center">
-              <Pagination className="custom-pagination-stai">
+              <Pagination className="custom-pagination-STIT">
                 <Pagination.Prev onClick={() => handlePageChange(currentPage - 1)} disabled={currentPage === 1} />
                 {[...Array(totalPages)].map((_, i) => (
                   <Pagination.Item 
